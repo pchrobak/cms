@@ -1,0 +1,10 @@
+.input-mysize-medium { width: 350px; }
+.input-mysize-textarea { width: 600px; }
+#cake-breadcrumbs {
+	padding:5px 0 0 0;
+	margin: 0 0 10px 0;
+	border-bottom:1px solid #e5e5e5;}
+	
+	legend{
+		border:none !important;
+	}
