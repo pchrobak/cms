@@ -55,19 +55,33 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
 
 	<div id="container">
 		<div id="content">
-			<?php echo $this->Session->flash(); ?>
 			
 			<?php echo $this->element('menu/top_menu'); ?>
 			<div class="container">
 				<div id="cake-breadcrumbs"><?php echo $this->Html->getCrumbs(' > ','Home');?></div>	
+				<?php echo $this->Session->flash(); ?>
+		
 				<?php echo $this->fetch('content'); ?>
 			</div>
 		</div>
 	</div>
-	
-	<footer class="container">
-		
-	</footer><!-- /container -->
+	<br><br>
+	<div class="navbar navbar-fixed-bottom">
+	<div class="navbar-inner">
+		<div class="container">
+			<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</a>
+			
+			<div id="footer-text">
+				&copy<?php echo date("Y")?> All Rights Reserved
+			</div>
+
+			</div>
+		</div>
+	</div>
 	
 	<?php echo $this->element('sql_dump'); ?>
 </body>

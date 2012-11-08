@@ -63,7 +63,7 @@ class SeriesController extends AppController {
 		}
 		if ($this->request->is('post') || $this->request->is('put')) {
 			if ($this->Series->save($this->request->data)) {
-				$this->Session->setFlash(__('The series has been saved'));
+				$this->Session->setFlash(__('The series has been saved successfully!'));
 				$this->redirect(array('action' => 'index'));
 			} else {
 				$this->Session->setFlash(__('The series could not be saved. Please, try again.'));
@@ -90,7 +90,7 @@ class SeriesController extends AppController {
 			throw new NotFoundException(__('Invalid series'));
 		}
 		if ($this->Series->delete()) {
-			$this->Session->setFlash(__('Series deleted'));
+			$this->Session->setFlash(__('Series was successfully deleted!'));
 			$this->redirect(array('action' => 'index'));
 		}
 		$this->Session->setFlash(__('Series was not deleted'));
