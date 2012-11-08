@@ -67,18 +67,9 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
 	</div>
 	<br><br>
 	<div class="navbar navbar-fixed-bottom">
-	<div class="navbar-inner">
-		<div class="container">
-			<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-				<span class="icon-bar"></span>
-				<span class="icon-bar"></span>
-				<span class="icon-bar"></span>
-			</a>
-			
+		<div class="navbar-inner">
 			<div id="footer-text">
 				&copy<?php echo date("Y")?> All Rights Reserved
-			</div>
-
 			</div>
 		</div>
 	</div>

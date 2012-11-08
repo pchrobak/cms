@@ -1,6 +1,6 @@
 <?php $this->Html->addCrumb('Series', '/series');
 	  $this->Html->addCrumb('Edit '.$this->Form->value('Series.series_name'), '/series');?>
-
+	
 	<fieldset>
 		<legend><?php echo __('Edit Series'); ?>
 			<div class="btn-group pull-right">
@@ -13,6 +13,7 @@
 		<li><?php echo $this->Html->link(__('List Series'), array('action' => 'index')); ?></li></ul>
 			</div>
 		</legend>
+
 		<?php echo $this->Form->create('Series'); ?>
 	<?php
 		echo $this->Form->input('id');

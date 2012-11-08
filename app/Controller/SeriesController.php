@@ -41,10 +41,10 @@ class SeriesController extends AppController {
 		if ($this->request->is('post')) {
 			$this->Series->create();
 			if ($this->Series->save($this->request->data)) {
-				$this->Session->setFlash(__('The series has been saved'));
+				$this->Session->setFlash('You have successfully Saved a Series!', 'default', array('class' => 'success_message'));
 				$this->redirect(array('action' => 'index'));
 			} else {
-				$this->Session->setFlash(__('The series could not be saved. Please, try again.'));
+				$this->Session->setFlash('There was an error in saving this form.  Please make sure all require fields are filled in', 'default', array('class' => 'error_message'));
 			}
 		}
 	}
@@ -63,10 +63,10 @@ class SeriesController extends AppController {
 		}
 		if ($this->request->is('post') || $this->request->is('put')) {
 			if ($this->Series->save($this->request->data)) {
-				$this->Session->setFlash(__('The series has been saved successfully!'));
+				$this->Session->setFlash('You have successfully Saved a Series!', 'default', array('class' => 'success_message'));
 				$this->redirect(array('action' => 'index'));
 			} else {
-				$this->Session->setFlash(__('The series could not be saved. Please, try again.'));
+				$this->Session->setFlash('There was an error in saving this form.  Please make sure all require fields are filled in', 'default', array('class' => 'error_message'));
 			}
 		} else {
 			$this->request->data = $this->Series->read(null, $id);
