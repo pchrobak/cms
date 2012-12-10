@@ -1,3 +1,4 @@
+<div class="page-content">
 	<?php $this->Html->addCrumb('Series', '/series');?>
 	<h2><?php echo __('Series'); ?><button class="btn pull-right"><?php echo $this->Html->link(__('New Series'), array('action' => 'add')); ?></button></h2>
 	<table cellpadding="0" cellspacing="0" class="table table-bordered table-striped">
@@ -39,3 +40,4 @@
 		//echo $this->Paginator->next(__('next') . ' >', array(), null, array('class' => 'next disabled'));
 	?>
 	</div>
+</div>

@@ -12,10 +12,13 @@
 				<span class="icon-bar"></span>
 				<span class="icon-bar"></span>
 			</a>
-			<a class="brand" target="_blank" href="/cake/">CMS</a>
+			<a class="brand" href="<?php echo $this->base?>">CMS</a>
 			<div class="nav-collapse">
+			<?php if($this->Session->read('Auth.User')){?>
+				<a id="login-info" href="<?php echo $this->base?>/users/logout"><button type="button" class="btn btn-inverse"> <i class="icon-white icon-user"></i> logout <?php echo $this->Session->read('Auth.User.username');?></button></a>
+			
 				<ul class="nav nav-pills">
-					<li <?php if($current_page=="index"){echo'class="active"';} ?>>
+					<!--<li <?php if($current_page=="index"){echo'class="active"';} ?>>
 						<?php echo $this->Html->link('Scaffolding', array('controller' => 'app', 'action' => 'index')); ?>
 					</li>
 					<li <?php if($current_page=="base_css"){echo'class="active"';} ?>>
@@ -26,7 +29,7 @@
 					</li>
 					<li <?php if($current_page=="javascript"){echo'class="active"';} ?>>
 						<?php echo $this->Html->link('Javascript plugins', array('controller' => 'app', 'action' => 'javascript')); ?>
-					</li>
+					</li>-->
 					<li class="dropdown">
 						<a class="dropdown-toggle" data-toggle="dropdown" href="#">Products <b class="caret"></b></a>
 						<ul class="dropdown-menu">
@@ -39,8 +42,35 @@
 						<ul class="dropdown-menu">
 							<li><a href="#buttonGroups">Categories</a></li>
 							<li><a href="#buttonDropdowns">Downloads</a></li>
+							<li><a href="#buttonDropdowns">Spec Attributes</a></li>
+							<li><a href="#buttonDropdowns">Finishes/Color</a></li>
+							<li><a href="#buttonDropdowns">High Res Images</a></li>
 						</ul>
 					</li>
+					
+					<li class="dropdown">
+						<a class="dropdown-toggle" data-toggle="dropdown" href="#">Press & Partners <b class="caret"></b></a>
+						<ul class="dropdown-menu">
+							<li><a href="#buttonGroups">News</a></li>
+							<li><a href="#buttonDropdowns">Pro Reviews</a></li>
+						</ul>
+					</li>
+					<li class="dropdown">
+						<a class="dropdown-toggle" data-toggle="dropdown" href="#">Customer Service <b class="caret"></b></a>
+						<ul class="dropdown-menu">
+							<li><a href="#buttonGroups">Registration</a></li>
+							<li><a href="#buttonDropdowns">Customer Reviews</a></li>
+							<li><a href="#buttonDropdowns">Monthly Sweepstakes</a></li>
+						</ul>
+					</li>
+					<li class="dropdown">
+						<a class="dropdown-toggle" data-toggle="dropdown" href="#">Eductation <b class="caret"></b></a>
+						<ul class="dropdown-menu">
+							<li><a href="#buttonGroups">FAQs</a></li>
+							<li><a href="#buttonDropdowns">Articles</a></li>
+						</ul>
+					</li>
+				<?php }?>
 
 				</ul>
 			</div>

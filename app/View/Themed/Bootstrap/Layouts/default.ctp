@@ -26,7 +26,8 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
 <head>
 	<?php echo $this->Html->charset(); ?>
 	<title>
-		<?php echo $title_for_layout; ?>
+		<?php //echo $title_for_layout; ?>
+		Company CMS
 	</title>
 	<?php
 		echo $this->Html->meta(array("name"=>"viewport","content"=>"width=device-width,  initial-scale=1.0"));
@@ -58,7 +59,9 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
 			
 			<?php echo $this->element('menu/top_menu'); ?>
 			<div class="container">
-				<div id="cake-breadcrumbs"><?php echo $this->Html->getCrumbs(' > ','Home');?></div>	
+				<?php if($this->Session->read('Auth.User')){?>
+					<div id="cake-breadcrumbs"><?php echo $this->Html->getCrumbs(' > ','Home');?></div>	
+				<?php }?>
 				<?php echo $this->Session->flash(); ?>
 		
 				<?php echo $this->fetch('content'); ?>

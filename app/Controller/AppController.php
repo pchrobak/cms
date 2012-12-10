@@ -35,6 +35,14 @@ App::uses('Controller', 'Controller');
 class AppController extends Controller {
 public $theme = "Bootstrap";
 
+ public $components = array(
+        'Session',
+        'Auth' => array(
+            'loginRedirect' => array('controller' => 'pages', 'action' => 'dashboard'),
+            'logoutRedirect' => array('controller' => 'users', 'action' => 'login')
+        )
+    );   
+
 public function index() {
 
 }

@@ -1,4 +1,5 @@
-<?php $this->Html->addCrumb('Series', '/series');
+<div class="page-content">
+	<?php $this->Html->addCrumb('Series', '/series');
 	  $this->Html->addCrumb('Edit '.$this->Form->value('Series.series_name'), '/series');?>
 	
 	<fieldset>
@@ -35,3 +36,4 @@
 
 <?php echo $this->Form->end(__('Submit')); ?>
 	</fieldset>
+</div>
