@@ -3,7 +3,7 @@
 /	DEFAULT STYLES
 /***************************************************************************************************/
 .input-mysize-medium { width: 350px; }
-.input-mysize-textarea { width: 600px; }
+.input-mysize-textarea { width: 75%; }
 #cake-breadcrumbs {
 	padding:5px 0 0 0;
 	margin: 0 0 10px 0;
@@ -93,11 +93,8 @@ legend{border:none !important;	}
 }
 
 .container {
-        width: 80% !important;
-		
-      }
-
-
+        width: 70% !important;
+}
 /***************************************************************************************************
 /	FOOTER
 /***************************************************************************************************/

@@ -1,3 +1,4 @@
+<?php echo $this->Html->script('ckeditor/ckeditor');?>
 <div class="page-content">
 	<?php $this->Html->addCrumb('Series', '/series');
 	  $this->Html->addCrumb('Edit '.$this->Form->value('Series.series_name'), '/series');?>
@@ -23,8 +24,8 @@
 		echo $this->Form->input('html_name', array('class' => 'input-xxlarge'));
 		echo $this->Form->input('directory', array('class' => 'input-xxlarge'));
 		echo $this->Form->input('sort');
-		echo $this->Form->input('overview', array('class' => 'input-mysize-textarea'));
-		echo $this->Form->input('product_line_overview', array('class' => 'input-mysize-textarea'));
+		echo $this->Form->input('overview', array('class'=>'ckeditor'));
+		echo $this->Form->input('product_line_overview', array('class'=>'ckeditor'));
 		echo $this->Form->input('series_badge');
 		echo $this->Form->input('visible');
 		echo $this->Form->input('meta_title', array('class' => 'iinput-xxlarge'));
