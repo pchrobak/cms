@@ -28,7 +28,17 @@ CKEDITOR.editorConfig = function( config ) {
 	// Remove some buttons, provided by the standard plugins, which we don't
 	// need to have in the Standard(s) toolbar.
 	config.removeButtons = 'Underline,Subscript,Superscript';
+		
 	
-	//config.width = 850;
-config.width = '77%';
+	
+	config.width = '77%';
+	
+	
+	//Set up CKfinder integration
+	config.filebrowserBrowseUrl = '/cms/js/ckfinder/ckfinder.html';
+	config.filebrowserImageBrowseUrl = '/cms/js/ckfinder/ckfinder.html?Type=Images';
+	config.filebrowserFlashBrowseUrl = '/cms/js/ckfinder/ckfinder.html?Type=Flash';
+	config.filebrowserUploadUrl = '/cms/js/ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Files';
+	config.filebrowserImageUploadUrl = '/cms/js/ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Images';
+	config.filebrowserFlashUploadUrl = '/cms/js/ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Flash';
 };
