@@ -1,6 +1,6 @@
 <div class="page-content">
 	<?php $this->Html->addCrumb('Series', '/series');?>
-	<h2><?php echo __('Series'); ?><button class="btn pull-right"><?php echo $this->Html->link(__('New Series'), array('action' => 'add')); ?></button></h2>
+	<h3><?php echo __('Series Editor'); ?><button class="btn pull-right"><?php echo $this->Html->link(__('New Series'), array('action' => 'add')); ?></button></h3>
 	<table cellpadding="0" cellspacing="0" class="table table-bordered table-striped">
 	<tr>
 			<th><?php echo $this->Paginator->sort('id'); ?></th>

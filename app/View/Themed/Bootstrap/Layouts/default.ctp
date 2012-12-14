@@ -56,11 +56,37 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
 
 	<div id="container">
 		<div id="content">
+		<?php echo $this->element('menu/top_menu'); ?>
+			 <div class="container-fluid">
+			 <?php if($this->Session->read('Auth.User')){?>
+				<div id="cake-breadcrumbs"><?php echo $this->Html->getCrumbs(' > ','Home');?></div>	
+			<?php }?>
+      
+	  <div class="row-fluid">
+	   <?php if($this->Session->read('Auth.User')){?>
+        <div class="span3">
+          <div class="well sidebar-nav">
+		  <h4 style="padding:4px;margin:0px;border-bottom:1px solid #ccc;"><i class="icon-home"></i> <?php echo $this->Html->link('Dashboard', array('controller' => 'pages', 'action' => 'dashboard')); ?></h4>
 			
-			<?php echo $this->element('menu/top_menu'); ?>
-			<div class="container">
+		   <ul class="nav nav-list">
+              <li class="nav-header">Product</li>
+				  <li class="sidebar-indent"><a href="#">Products</a></li>
+				  <li class="sidebar-indent"><?php echo $this->Html->link('Series', array('controller' => 'series', 'action' => 'index')); ?></li>
+              <li class="nav-header">Product Tools</li>
+				  <li class="sidebar-indent"><a href="#">Categories</a></li>
+				  <li class="sidebar-indent"><a href="#">Downloads</a></li>
+				  <li class="sidebar-indent"><a href="#">High Res</a></li>
+              <li class="nav-header">Customer Service</li>
+				  <li class="sidebar-indent"><a href="#buttonGroups">Registration</a></li>
+				  <li class="sidebar-indent"><a href="#">Customer Reviews</a></li>
+				  <li class="sidebar-indent"><a href="#">Monthly Sweepstakes</a></li>
+            </ul>
+          </div><!--/.well -->
+        </div><!--/span-->
+		 <?php }?>
+        <div class="span9">				
 				<?php if($this->Session->read('Auth.User')){?>
-					<div id="cake-breadcrumbs"><?php echo $this->Html->getCrumbs(' > ','Home');?></div>	
+					
 				<?php }?>
 				<?php echo $this->Session->flash(); ?>
 		
@@ -69,7 +95,7 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
 		</div>
 	</div>
 	<br><br>
-	<div class="navbar navbar-fixed-bottom">
+	<div class="navbar-inverse navbar-fixed-bottom">
 		<div class="navbar-inner">
 			<div id="footer-text">
 				&copy<?php echo date("Y")?> All Rights Reserved

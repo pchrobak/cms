@@ -1,5 +1,3 @@
-
-<?php $testvar = $_SESSION["Auth"]["User"]["username"]?>
 <?php echo $this->Html->script('ckeditor/ckeditor');?>
 <?php echo $this->Html->script('ckfinder/ckfinder.js');?>
 <script type="text/javascript">
@@ -51,7 +49,7 @@ function SetFileField( fileUrl )
 		echo $this->Form->input('product_line_overview', array('class'=>'ckeditor'));?>
 		<div class="input text">
 			<label for="SeriesImage">Series Image</label>
-			<input id="xFilePath" name="data[Series][series_badge]" value="<?php echo $this->data["Series"]["series_badge"]?>" type="text">
+			<input id="xFilePath" name="data[Series][series_badge]" value="<?php echo $this->data["Series"]["series_badge"]?>" type="text" class="input-xlarge">
 			<input type="button" class="btn" style="margin:0 0 10px 15px;" value="Browse Server" onclick="BrowseServer();" />
 		</div>
 <?php

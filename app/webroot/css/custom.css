@@ -3,16 +3,19 @@
 /	DEFAULT STYLES
 /***************************************************************************************************/
 .input-mysize-medium { width: 350px; }
-.input-mysize-textarea { width: 75%; }
+.input-mysize-textarea { width: 98%; }
 #cake-breadcrumbs {
-	padding:5px 0 0 0;
+	padding:5px 0 0 4px;
 	margin: 0 0 10px 0;
-	border-bottom:1px solid #e5e5e5;}
+	border-bottom:1px solid #e5e5e5;
+	font-size:smaller;}
 	
 legend{border:none !important;	}
 
-
-
+.sidebar-indent{padding-left:10px;}
+.well{
+	background-color:#fff !important;
+}
 /***************************************************************************************************
 /	FLASH MESSAGES
 /***************************************************************************************************/
@@ -89,6 +92,8 @@ legend{border:none !important;	}
 
  #login-info{
 	float:right;
+	padding:0 0 7px 0;
+	margin:0px
 	
 }
 

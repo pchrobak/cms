@@ -1,12 +1,12 @@
 <style type="text/css">
       /* Override some defaults for a special login page */
-     
-     
       .container {
         width: 300px !important;
+		margin:auto;
       }
 </style>
-<h2>Company CMS</h2>
+<div class="container">
+<h3>Company CMS Login</h3>
 	<div class="login-form">
 		<?php echo $this->Form->create('User'); ?>
 			<fieldset>
@@ -20,4 +20,5 @@
 			</fieldset>
 		</form>
 		<small>Trouble logging in? <a href="mailto:test@test.com">Contact Us</a>
+	</div>
 	</div>
