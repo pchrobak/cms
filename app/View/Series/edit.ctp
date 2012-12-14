@@ -45,14 +45,13 @@ function SetFileField( fileUrl )
 		echo $this->Form->input('id');
 		echo $this->Form->input('visible');
 		echo $this->Form->input('series_name', array('class' => 'input-xxlarge'));
-		echo $this->Form->input('series_name', array('class' => 'input-xxlarge'));
 		echo $this->Form->input('html_name', array('class' => 'input-xxlarge'));
 		echo $this->Form->input('directory', array('class' => 'input-xxlarge'));
 		echo $this->Form->input('overview', array('class'=>'ckeditor'));
 		echo $this->Form->input('product_line_overview', array('class'=>'ckeditor'));?>
 		<div class="input text">
 			<label for="SeriesImage">Series Image</label>
-			<input id="xFilePath" name="data[series][series_image]" type="text">
+			<input id="xFilePath" name="data[Series][series_badge]" value="<?php echo $this->data["Series"]["series_badge"]?>" type="text">
 			<input type="button" class="btn" style="margin:0 0 10px 15px;" value="Browse Server" onclick="BrowseServer();" />
 		</div>
 <?php

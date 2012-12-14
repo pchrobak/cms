@@ -7,7 +7,6 @@
 			<th><?php echo $this->Paginator->sort('series_name'); ?></th>
 			<th><?php echo $this->Paginator->sort('directory'); ?></th>		
 			<th><?php echo $this->Paginator->sort('visible'); ?></th>
-			<th><?php echo $this->Paginator->sort('modified'); ?></th>
 			<th class="actions"><?php echo __('Actions'); ?></th>
 	</tr>
 	<?php
@@ -17,7 +16,6 @@
 		<td><?php echo h($series['Series']['series_name']); ?>&nbsp;</td>
 		<td><?php echo h($series['Series']['directory']); ?>&nbsp;</td>
 		<td><?php if($series['Series']['visible'] == 1){?><img src='img/test-pass-icon.png'><?php }else{?><img src='img/test-fail-icon.png'><?php }?></td>
-		<td><?php echo h($series['Series']['modified']); ?>&nbsp;</td>
 
 		<td class="actions">
 			<?php echo $this->Html->link(__('Edit'), array('action' => 'edit', $series['Series']['id'])); ?> | 

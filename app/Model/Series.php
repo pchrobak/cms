@@ -29,11 +29,6 @@ class Series extends AppModel {
             'required' => true,
             'message'  => 'This field cannot be blank'
         ),
-		'sort' => array(
-            'rule'    => 'numeric',
-            'required' => true,
-            'message'  => 'This field cannot be blank'
-        ),
 		'overview' => array(
             'rule'    => array('minLength', 5),
             'required' => true,
