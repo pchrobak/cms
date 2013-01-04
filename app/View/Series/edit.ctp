@@ -1,7 +1,6 @@
 <?php echo $this->Html->script('ckeditor/ckeditor');?>
 <?php echo $this->Html->script('ckfinder/ckfinder.js');?>
 <script type="text/javascript">
-
 function BrowseServer()
 {
 	// You can use the "CKFinder" class to render CKFinder in a page:
@@ -16,8 +15,7 @@ function SetFileField( fileUrl )
 {
 	document.getElementById( 'xFilePath' ).value = fileUrl;
 }
-
-	</script>
+</script>
 
 	
 	
