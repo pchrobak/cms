@@ -80,6 +80,8 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
 				  <li class="sidebar-indent"><a href="#buttonGroups">Registration</a></li>
 				  <li class="sidebar-indent"><a href="#">Customer Reviews</a></li>
 				  <li class="sidebar-indent"><a href="#">Monthly Sweepstakes</a></li>
+			  <li class="nav-header">Content</li>
+				  <li class="sidebar-indent"><a href="#buttonGroups"><?php echo $this->Html->link('Site pages', array('controller' => 'sitepages', 'action' => 'index')); ?></li>
             </ul>
           </div><!--/.well -->
         </div><!--/span-->
