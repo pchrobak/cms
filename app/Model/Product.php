@@ -3,6 +3,8 @@ App::uses('AppModel', 'Model');
 /**
  * Product Model
  *
+ * @property Series $Series
+ * @property Category $Category
  */
 class Product extends AppModel {
 
@@ -12,5 +14,46 @@ class Product extends AppModel {
  * @var string
  */
 	public $displayField = 'name';
+
+
+	//The Associations below have been created with all possible keys, those that are not needed can be removed
+
+/**
+ * belongsTo associations
+ *
+ * @var array
+ */
+	public $belongsTo = array(
+		'Series' => array(
+			'className' => 'Series',
+			'foreignKey' => 'series_id',
+			'conditions' => '',
+			'fields' => '',
+			'order' => ''
+		)
+	);
+
+/**
+ * hasAndBelongsToMany associations
+ *
+ * @var array
+ */
+	public $hasAndBelongsToMany = array(
+		'Category' => array(
+			'className' => 'Category',
+			'joinTable' => 'products_categories',
+			'foreignKey' => 'product_id',
+			'associationForeignKey' => 'category_id',
+			'unique' => true,
+			'conditions' => '',
+			'fields' => '',
+			'order' => '',
+			'limit' => '',
+			'offset' => '',
+			'finderQuery' => '',
+			'deleteQuery' => '',
+			'insertQuery' => ''
+		)
+	);
 
 }

@@ -89,10 +89,10 @@ class SitePagesController extends AppController {
 			throw new NotFoundException(__('Invalid site page'));
 		}
 		if ($this->SitePage->delete()) {
-			$this->Session->setFlash(__('A page was successfully deleted!', array('class' => 'success_message')));
+			$this->Session->setFlash(__('A page was successfully deleted!', 'default', array('class' => 'success_message')));
 			$this->redirect(array('action' => 'index'));
 		}
-		$this->Session->setFlash(__('Sorry, there was an error, A page was not deleted', array('class' => 'error_message')));
+		$this->Session->setFlash(__('Sorry, there was an error, A page was not deleted', 'default', array('class' => 'error_message')));
 		$this->redirect(array('action' => 'index'));
 	}
 }

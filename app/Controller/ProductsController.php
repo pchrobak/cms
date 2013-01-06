@@ -32,6 +32,9 @@ class ProductsController extends AppController {
 				$this->Session->setFlash('There was an error in saving this form.  Please make sure all require fields are filled in', 'default', array('class' => 'error_message'));
 			}
 		}
+		$series = $this->Product->Series->find('list');
+		$categories = $this->Product->Category->find('list');
+		$this->set(compact('series', 'categories'));
 	}
 
 /**
@@ -56,6 +59,9 @@ class ProductsController extends AppController {
 		} else {
 			$this->request->data = $this->Product->read(null, $id);
 		}
+		$series = $this->Product->Series->find('list');
+		$categories = $this->Product->Category->find('list');
+		$this->set(compact('series', 'categories'));
 	}
 
 /**
@@ -75,10 +81,10 @@ class ProductsController extends AppController {
 			throw new NotFoundException(__('Invalid product'));
 		}
 		if ($this->Product->delete()) {
-			$this->Session->setFlash('Product Deleted!', 'default', array('class' => 'success_message'));
+			$this->Session->setFlash(__('Product was successfully deleted!', 'default', array('class' => 'success_message')));
 			$this->redirect(array('action' => 'index'));
 		}
-		$this->Session->setFlash('There was an error deleting the product please try again', 'default', array('class' => 'error_message'));
+		$this->Session->setFlash(__('Product was not deleted', 'default', array('class' => 'error_message')));
 		$this->redirect(array('action' => 'index'));
 	}
 }
