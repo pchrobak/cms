@@ -91,7 +91,14 @@ function SetFileField( fileUrl )
 		
 		<!--CONTENT FOR DOWNLOADS-->
 		<div class="tab-pane" id="downloads">
-			<p>Downloads here</p>
+		<h5><?php echo $this->data["Product"]["name"];?> Downloads</h5>
+			<?php echo $this->Form->create('Product'); ?>
+			<fieldset>
+			<?php
+				echo $this->Form->input('Download', array('label'=>''));
+				echo $this->Form->submit('Submit', array('class' => 'btn'));
+				echo $this->Form->end();?>
+			</fieldset>
 		</div>
 	</div>
 </div>

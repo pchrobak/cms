@@ -28,4 +28,22 @@ class Download extends AppModel {
 			'message' => 'You must select a file'
 		)
 	);
+	
+	public $hasAndBelongsToMany = array(
+		'Product' => array(
+			'className' => 'Product',
+			'joinTable' => 'products_downloads',
+			'foreignKey' => 'id',
+			'associationForeignKey' => 'product_id',
+			'unique' => true,
+			'conditions' => '',
+			'fields' => '',
+			'order' => '',
+			'limit' => '',
+			'offset' => '',
+			'finderQuery' => '',
+			'deleteQuery' => '',
+			'insertQuery' => ''
+		)
+	);
 }
