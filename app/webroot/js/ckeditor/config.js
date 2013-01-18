@@ -31,7 +31,7 @@ CKEDITOR.editorConfig = function( config ) {
 		
 	
 	
-	config.width = '100%';
+	config.width = '99%';
 	
 	
 	//Set up CKfinder integration
