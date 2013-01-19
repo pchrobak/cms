@@ -41,8 +41,6 @@ function SetFileField( fileUrl )
 		echo $this->Form->input('id');
 		echo $this->Form->input('visible');
 		echo $this->Form->input('series_name', array('class' => 'input-xxlarge'));
-		echo $this->Form->input('html_name', array('class' => 'input-xxlarge'));
-		echo $this->Form->input('directory', array('class' => 'input-xxlarge'));
 		echo $this->Form->input('overview', array('class'=>'ckeditor'));?>
 		<div class="input text">
 			<label for="SeriesImage">Series Image</label>

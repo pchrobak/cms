@@ -28,6 +28,8 @@ class CategoriesController extends AppController {
 		$this->set(compact('subcat'));
 		
 		if ($this->request->is('post')) {
+			//auto generate directory URL
+			$this->request->data['Category']['directory'] = strtolower(str_replace(' ', '-', $this->request->data['Category']['name']));
 			$this->Category->create();
 			if ($this->Category->save($this->request->data)) {
 				$this->Session->setFlash('You have successfully Saved a Category!', 'default', array('class' => 'success_message'));
@@ -55,6 +57,8 @@ class CategoriesController extends AppController {
 			throw new NotFoundException(__('Invalid category'));
 		}
 		if ($this->request->is('post') || $this->request->is('put')) {
+			//auto generate directory URL
+			$this->request->data['Category']['directory'] = strtolower(str_replace(' ', '-', $this->request->data['Category']['name']));
 			if ($this->Category->save($this->request->data)) {
 				$this->Session->setFlash('You have successfully Saved a Category!', 'default', array('class' => 'success_message'));
 				$this->redirect(array('action' => 'index'));

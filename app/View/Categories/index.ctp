@@ -3,19 +3,19 @@
 	<h3><?php echo __('Categories Editor'); ?><button class="btn pull-right"><?php echo $this->Html->link(__('New Category'), array('action' => 'add')); ?></button></h3>
 	<table cellpadding="0" cellspacing="0" class="table table-bordered table-striped">
 	<tr>
-			<th><?php echo $this->Paginator->sort('name'); ?></th>
-			<th><?php echo $this->Paginator->sort('directory'); ?></th>
+			<th><?php echo $this->Paginator->sort('id'); ?></th>
 			<th><?php echo $this->Paginator->sort('visible'); ?></th>
-			<th><?php echo $this->Paginator->sort('modified'); ?></th>
+			<th><?php echo $this->Paginator->sort('name'); ?></th>
+			<th><?php echo $this->Paginator->sort('created'); ?></th>
 			<th class="actions"><?php echo __('Actions'); ?></th>
 	</tr>
 	<?php
 	foreach ($categories as $category): ?>
 	<tr>
-		<td><?php echo h($category['Category']['name']); ?>&nbsp;</td>
-		<td><?php echo h($category['Category']['directory']); ?>&nbsp;</td>
+		<td><?php echo h($category['Category']['id']); ?>&nbsp;</td>
 		<td><?php if($category['Category']['visible'] == 1){?><img src='img/test-pass-icon.png'><?php }else{?><img src='img/test-fail-icon.png'><?php }?></td>
-		<td><?php echo h($category['Category']['modified']); ?>&nbsp;</td>
+		<td><?php echo h($category['Category']['name']); ?>&nbsp;</td>
+		<td><?php echo h($category['Category']['created']); ?>&nbsp;</td>
 		<td class="actions">
 			<?php echo $this->Html->link(__('Edit'), array('action' => 'edit', $category['Category']['id'])); ?> | 
 			<?php echo $this->Form->postLink(__('Delete'), array('action' => 'delete', $category['Category']['id']), null, __('Are you sure you want to delete # %s?', $category['Category']['id'])); ?>

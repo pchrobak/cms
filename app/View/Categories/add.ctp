@@ -25,8 +25,7 @@
 	<?php
 		echo $this->Form->input('visible');
 		echo $this->Form->input('subcategory', array('type'=>'select', 'options' => $subcat, 'empty' => 'Select subcategory if applicable','class' => 'input-xlarge'));
-		echo $this->Form->input('name', array('class' => 'input-xxlarge'));
-		echo $this->Form->input('directory', array('class' => 'input-xxlarge'));?>
+		echo $this->Form->input('name', array('class' => 'input-xxlarge'));?>
 		<div class="input text">
 			<label for="SeriesImage">Overview Image</label>
 			<input id="xFilePath" name="data[Category][overview_image]" type="text" class="input-xlarge">

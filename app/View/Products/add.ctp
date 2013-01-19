@@ -33,7 +33,6 @@
 			<input type="button" class="btn" style="margin:0 0 10px 15px;" value="Browse Server" onclick="BrowseServer();" />
 		</div>
 		<?php
-		echo $this->Form->input('prod_directory', array('class' => 'input-xxlarge'));
 		echo $this->Form->input('quick_description', array('class' => 'input-xxlarge'));
 		echo $this->Form->input('body_copy', array('class' => 'ckeditor'));
 		echo $this->Form->input('specs', array('class' => 'ckeditor'));

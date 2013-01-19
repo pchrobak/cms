@@ -56,7 +56,7 @@ function SetFileField( fileUrl )
 					<input id="xFilePath" name="data[Product][product_image]" value="<?php echo $this->data["Product"]["product_image"]?>" type="text" class="input-xlarge">
 					<input type="button" class="btn" style="margin:0 0 10px 15px;" value="Browse Server" onclick="BrowseServer();" />
 				</div>
-				<?php echo $this->Form->input('prod_directory', array('class' => 'input-xxlarge'));
+				<?php
 				echo $this->Form->input('quick_description', array('class' => 'input-xxlarge'));
 				echo $this->Form->input('body_copy', array('class' => 'ckeditor'));
 				echo $this->Form->input('priced_per', array('class' => 'input-xlarge', 'options'=> array('each'=>'each','single'=>'single','system'=>'system'), 'empty'=>true));

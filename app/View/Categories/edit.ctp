@@ -48,7 +48,6 @@ function SetFileField( fileUrl )
 		</div>
 
 		<?php echo $this->Form->input('overview', array('class' => 'ckeditor'));
-		echo $this->Form->input('directory', array('type' => 'hidden', 'value' => strtolower(str_replace(" ", '-',$this->data["Category"]["name"]))));
 		echo $this->Form->input('meta_title', array('class' => 'input-xxlarge'));
 		echo $this->Form->input('meta_description', array('class' => 'input-xxlarge'));
 		echo $this->Form->input('meta_keywords', array('class' => 'input-xxlarge'));

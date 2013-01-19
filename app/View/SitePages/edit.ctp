@@ -3,7 +3,7 @@
 
 <div class="page-content">
 	<?php $this->Html->addCrumb('Site Pages', '/sitepages');
-	  $this->Html->addCrumb('Edit '.$this->Form->value('SitePages.title'), '/sitepages');?>
+	  $this->Html->addCrumb('Edit '.$this->data['SitePage']['title'], '/sitepages');?>
 
 
 
@@ -24,7 +24,6 @@
 		echo $this->Form->input('id');
 		echo $this->Form->input('visible');
 		echo $this->Form->input('title', array('class' => 'input-xxlarge'));
-		echo $this->Form->input('directory', array('class' => 'input-xxlarge'));
 		echo $this->Form->input('page_text', array('class' => 'ckeditor'));
 		echo $this->Form->input('meta_title', array('class' => 'input-xxlarge'));
 		echo $this->Form->input('meta_description', array('class' => 'input-xxlarge'));

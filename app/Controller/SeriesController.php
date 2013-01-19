@@ -17,20 +17,6 @@ class SeriesController extends AppController {
 		$this->set('series', $this->paginate());
 	}
 
-/**
- * view method
- *
- * @throws NotFoundException
- * @param string $id
- * @return void
- */
-	public function view($id = null) {
-		$this->Series->id = $id;
-		if (!$this->Series->exists()) {
-			throw new NotFoundException(__('Invalid series'));
-		}
-		$this->set('series', $this->Series->read(null, $id));
-	}
 
 /**
  * add method
@@ -39,6 +25,8 @@ class SeriesController extends AppController {
  */
 	public function add() {
 		if ($this->request->is('post')) {
+			//auto generate directory URL
+			$this->request->data['Series']['directory'] = strtolower(str_replace(' ', '-', $this->request->data['Series']['series_name']));
 			$this->Series->create();
 			if ($this->Series->save($this->request->data)) {
 				$this->Session->setFlash('You have successfully Saved a Series!', 'default', array('class' => 'success_message'));
@@ -62,6 +50,8 @@ class SeriesController extends AppController {
 			throw new NotFoundException(__('Invalid series'));
 		}
 		if ($this->request->is('post') || $this->request->is('put')) {
+			//auto generate directory URL
+			$this->request->data['Series']['directory'] = strtolower(str_replace(' ', '-', $this->request->data['Series']['series_name']));
 			if ($this->Series->save($this->request->data)) {
 				$this->Session->setFlash('You have successfully Saved a Series!', 'default', array('class' => 'success_message'));
 				$this->redirect(array('action' => 'index'));

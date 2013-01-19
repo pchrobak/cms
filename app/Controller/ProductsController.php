@@ -24,6 +24,8 @@ class ProductsController extends AppController {
  */
 	public function add() {
 		if ($this->request->is('post')) {
+			//auto generate directory URL
+			$this->request->data['Product']['prod_directory'] = strtolower(str_replace(' ', '-', $this->request->data['Product']['name']));
 			$this->Product->create();
 			if ($this->Product->save($this->request->data)) {
 				$this->Session->setFlash('You have successfully Saved a Product!', 'default', array('class' => 'success_message'));
@@ -51,6 +53,8 @@ class ProductsController extends AppController {
 			throw new NotFoundException(__('Invalid product'));
 		}
 		if ($this->request->is('post') || $this->request->is('put')) {
+			//auto generate directory URL
+			$this->request->data['Product']['prod_directory'] = strtolower(str_replace(' ', '-', $this->request->data['Product']['name']));
 			if ($this->Product->save($this->request->data)) {
 				$this->Session->setFlash('You have successfully Saved a Product!', 'default', array('class' => 'success_message'));
 				$this->redirect(array('action' => 'index'));
