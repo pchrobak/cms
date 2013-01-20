@@ -37,7 +37,8 @@ class ProductsController extends AppController {
 		$series = $this->Product->Series->find('list');
 		$downloads = $this->Product->Download->find('list');
 		$categories = $this->Product->Category->find('list');
-		$this->set(compact('series', 'categories','downloads'));
+		$finishes = $this->Product->Finish->find('list');
+		$this->set(compact('series', 'categories', 'downloads', 'finishes'));
 	}
 
 /**
@@ -67,7 +68,8 @@ class ProductsController extends AppController {
 		$series = $this->Product->Series->find('list');
 		$downloads = $this->Product->Download->find('list');
 		$categories = $this->Product->Category->find('list');
-		$this->set(compact('series', 'categories', 'downloads'));
+		$finishes = $this->Product->Finish->find('list');
+		$this->set(compact('series', 'categories', 'downloads', 'finishes'));
 	}
 
 /**

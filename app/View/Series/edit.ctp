@@ -21,7 +21,7 @@ function SetFileField( fileUrl )
 	
 <div class="page-content">
 	<?php $this->Html->addCrumb('Series', '/series');
-	  $this->Html->addCrumb('Edit '.$this->Form->value('Series.series_name'), '/series');?>
+	  $this->Html->addCrumb('Edit '.$this->data['Series']['series_name'], '/series');?>
 	
 	<fieldset>
 		<legend><?php echo __('Edit Series'); ?>

@@ -87,10 +87,10 @@ class CategoriesController extends AppController {
 			throw new NotFoundException(__('Invalid category'));
 		}
 		if ($this->Category->delete()) {
-			$this->Session->setFlash(__('Category was successfully deleted!', 'default', array('class' => 'success_message')));
+			$this->Session->setFlash('Category was successfully deleted!', 'default', array('class' => 'success_message'));
 			$this->redirect(array('action' => 'index'));
 		}
-		$this->Session->setFlash(__('Category was not deleted', 'default', array('class' => 'error_message')));
+		$this->Session->setFlash('Category was not deleted', 'default', array('class' => 'error_message'));
 		$this->redirect(array('action' => 'index'));
 	}
 }

@@ -83,6 +83,21 @@ class Product extends AppModel {
 			'finderQuery' => '',
 			'deleteQuery' => '',
 			'insertQuery' => ''
+		),
+		'Finish' => array(
+			'className' => 'Finish',
+			'joinTable' => 'products_finishes',
+			'foreignKey' => 'product_id',
+			'associationForeignKey' => 'finish_id',
+			'unique' => true,
+			'conditions' => '',
+			'fields' => '',
+			'order' => '',
+			'limit' => '',
+			'offset' => '',
+			'finderQuery' => '',
+			'deleteQuery' => '',
+			'insertQuery' => ''
 		)
 	);
 

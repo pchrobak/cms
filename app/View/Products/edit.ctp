@@ -49,8 +49,9 @@ function SetFileField( fileUrl )
 				echo $this->Form->input('id');
 				echo $this->Form->input('visible');
 				echo $this->Form->input('name', array('class' => 'input-xxlarge'));
-				echo $this->Form->input('series_id', array('empty'=>true));
-				echo $this->Form->input('Category');?>
+				echo $this->Form->input('series_id',array('empty' => 'Select a Series'));
+				echo $this->Form->input('Category');
+				echo $this->Form->input('Finish');?>
 				<div class="input text">
 					<label for="ProductsImage">Product Image</label>
 					<input id="xFilePath" name="data[Product][product_image]" value="<?php echo $this->data["Product"]["product_image"]?>" type="text" class="input-xlarge">
@@ -59,7 +60,7 @@ function SetFileField( fileUrl )
 				<?php
 				echo $this->Form->input('quick_description', array('class' => 'input-xxlarge'));
 				echo $this->Form->input('body_copy', array('class' => 'ckeditor'));
-				echo $this->Form->input('priced_per', array('class' => 'input-xlarge', 'options'=> array('each'=>'each','single'=>'single','system'=>'system'), 'empty'=>true));
+				echo $this->Form->input('priced_per', array('class' => 'input-xlarge', 'options'=> array('each'=>'each','single'=>'single','system'=>'system'), 'empty'=>'Select Unit of Measure', 'label'=>'Unit Of Measure'));
 				echo $this->Form->input('msrp_usd', array('class' => 'input-xlarge'));
 				echo $this->Form->input('meta_keywords', array('class' => 'input-xxlarge'));
 				echo $this->Form->input('meta_title', array('class' => 'input-xxlarge'));

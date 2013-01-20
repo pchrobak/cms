@@ -22,29 +22,77 @@
 <?php echo $this->Form->create('Product'); ?>
 	<fieldset>
 		<legend><?php echo __('Add Product'); ?> <button class="btn pull-right"><?php echo $this->Html->link(__('List Product'), array('action' => 'index')); ?></button></legend>
-	<?php
-		echo $this->Form->input('visible');
-		echo $this->Form->input('name', array('class' => 'input-xxlarge'));
-		echo $this->Form->input('series_id');
-		echo $this->Form->input('Category');?>
-		<div class="input text">
-			<label for="ProductsImage">Product Image</label>
-			<input id="xFilePath" name="data[Product][product_image]" value="" type="text" class="input-xlarge">
-			<input type="button" class="btn" style="margin:0 0 10px 15px;" value="Browse Server" onclick="BrowseServer();" />
+	<ul class="nav nav-tabs" id="myTab">
+	  <li><a href="#details" data-toggle="tab" class="active">Product Details</a></li>
+	  <li><a href="#gallery" data-toggle="tab">Image Gallery</a></li>
+	  <li><a href="#specs" data-toggle="tab">Product Specs</a></li>
+	  <li><a href="#downloads" data-toggle="tab">Product Downloads</a></li>
+	</ul>
+	<div id="myTabContent" class="tab-content">
+		<div class="tab-pane fade" id="details">
+			<?php echo $this->Form->create('Product'); ?>
+			<fieldset>
+			<?php
+				echo $this->Form->input('id');
+				echo $this->Form->input('visible');
+				echo $this->Form->input('name', array('class' => 'input-xxlarge'));
+				echo $this->Form->input('series_id',array('empty' => 'Select a Series'));
+				echo $this->Form->input('Category');
+				echo $this->Form->input('Finish');?>
+				<div class="input text">
+					<label for="ProductsImage">Product Image</label>
+					<input id="xFilePath" name="data[Product][product_image]" value="" type="text" class="input-xlarge">
+					<input type="button" class="btn" style="margin:0 0 10px 15px;" value="Browse Server" onclick="BrowseServer();" />
+				</div>
+				<?php
+				echo $this->Form->input('quick_description', array('class' => 'input-xxlarge'));
+				echo $this->Form->input('body_copy', array('class' => 'ckeditor'));
+				echo $this->Form->input('priced_per', array('class' => 'input-xlarge', 'options'=> array('each'=>'each','single'=>'single','system'=>'system'), 'empty'=>'Select Unit of Measure', 'label'=>'Unit Of Measure'));
+				echo $this->Form->input('msrp_usd', array('class' => 'input-xlarge'));
+				echo $this->Form->input('meta_keywords', array('class' => 'input-xxlarge'));
+				echo $this->Form->input('meta_title', array('class' => 'input-xxlarge'));
+				echo $this->Form->input('meta_description', array('class' => 'input-xxlarge'));
+				echo $this->Form->submit('Submit', array('class' => 'btn'));
+				echo $this->Form->end();?>
+			
+			</fieldset>
 		</div>
-		<?php
-		echo $this->Form->input('quick_description', array('class' => 'input-xxlarge'));
-		echo $this->Form->input('body_copy', array('class' => 'ckeditor'));
-		echo $this->Form->input('specs', array('class' => 'ckeditor'));
-		echo $this->Form->input('priced_per', array('class' => 'input-xxlarge'));
-		echo $this->Form->input('msrp_usd', array('class' => 'input-xxlarge'));
 		
-		echo $this->Form->input('meta_keywords', array('class' => 'input-xxlarge'));
-		echo $this->Form->input('meta_title', array('class' => 'input-xxlarge'));
-		echo $this->Form->input('meta_description', array('class' => 'input-xxlarge'));
-	?>
-		</fieldset>
-	  <?php echo $this->Form->submit('Submit', array('class' => 'btn'));
-		echo $this->Form->end();?>
+		<!--CONTENT FOR IMAGE GALLERY-->
+		<div class="tab-pane" id="gallery">
+			<p>image gallery here</p>
+		</div>
+		
+		<!--CONTENT FOR SPECS-->
+		<div class="tab-pane" id="specs">
+		<h5>Specifications</h5>
+			<?php echo $this->Form->create('Product'); ?>
+			<fieldset>
+			<?php
+				echo $this->Form->input('id');
+				echo $this->Form->input('specs', array('class' => 'ckeditor', 'label'=>''));
+				echo $this->Form->submit('Submit', array('class' => 'btn'));
+				echo $this->Form->end();?>
+			
+			</fieldset>
+		</div>
+		
+		<!--CONTENT FOR DOWNLOADS-->
+		<div class="tab-pane" id="downloads">
+		<h5>Downloads</h5>
+			<?php echo $this->Form->create('Product'); ?>
+			<fieldset>
+			<?php
+				echo $this->Form->input('Download', array('label'=>''));
+				echo $this->Form->submit('Submit', array('class' => 'btn'));
+				echo $this->Form->end();?>
+			</fieldset>
+		</div>
+	</div>
 </div>
+<script>
+  $(function () {
+    $('#myTab a:first').tab('show');
+  })
+</script>
 
