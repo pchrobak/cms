@@ -68,6 +68,21 @@ class Product extends AppModel {
 			'finderQuery' => '',
 			'deleteQuery' => '',
 			'insertQuery' => ''
+		),
+		'Faq' => array(
+			'className' => 'Faq',
+			'joinTable' => 'products_faqs',
+			'foreignKey' => 'product_id',
+			'associationForeignKey' => 'faq_id',
+			'unique' => true,
+			'conditions' => '',
+			'fields' => '',
+			'order' => '',
+			'limit' => '',
+			'offset' => '',
+			'finderQuery' => '',
+			'deleteQuery' => '',
+			'insertQuery' => ''
 		)
 	);
 

@@ -69,21 +69,23 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
 		  <h4 style="padding:4px;margin:0px;border-bottom:1px solid #ccc;"><i class="icon-home"></i> <?php echo $this->Html->link('Dashboard', array('controller' => 'pages', 'action' => 'dashboard')); ?></h4>
 			
 		   <ul class="nav nav-list">
-              <li class="nav-header">Product</li>
+				<li class="nav-header">Product</li>
 				  <li class="sidebar-indent"><?php echo $this->Html->link('Products', array('controller' => 'products', 'action' => 'index')); ?></li>
 				  <li class="sidebar-indent"><?php echo $this->Html->link('Series', array('controller' => 'series', 'action' => 'index')); ?></li>
-              <li class="nav-header">Product Tools</li>
+				<li class="nav-header">Product Tools</li>
 				  <li class="sidebar-indent"><?php echo $this->Html->link('Categories', array('controller' => 'categories', 'action' => 'index')); ?></li>
 				  <li class="sidebar-indent"><?php echo $this->Html->link('Downloads', array('controller' => 'downloads', 'action' => 'index')); ?></li>
 				  <li class="sidebar-indent"><a href="#">High Res</a></li>
-			   <li class="nav-header">Press & Partners</li>
+				<li class="nav-header">Press & Partners</li>
 				  <li class="sidebar-indent"><?php echo $this->Html->link('News', array('controller' => 'news', 'action' => 'index')); ?></li>
 				  <li class="sidebar-indent"><?php echo $this->Html->link('Professional Reviews', array('controller' => 'professional_reviews', 'action' => 'index')); ?></li>
-              <li class="nav-header">Customer Service</li>
+				<li class="nav-header">Education</li>
+				  <li class="sidebar-indent"><?php echo $this->Html->link('FAQ\'s', array('controller' => 'faqs', 'action' => 'index')); ?></li>
+				<li class="nav-header">Customer Service</li>
 				  <li class="sidebar-indent"><a href="#buttonGroups">Registration</a></li>
 				  <li class="sidebar-indent"><a href="#">Customer Reviews</a></li>
 				  <li class="sidebar-indent"><a href="#">Monthly Sweepstakes</a></li>
-			  <li class="nav-header">Website Content</li>
+				<li class="nav-header">Website Content</li>
 				  <li class="sidebar-indent"><?php echo $this->Html->link('Site pages', array('controller' => 'sitepages', 'action' => 'index')); ?></li>
             </ul>
           </div><!--/.well -->

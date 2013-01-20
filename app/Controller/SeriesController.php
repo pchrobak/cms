@@ -80,10 +80,10 @@ class SeriesController extends AppController {
 			throw new NotFoundException(__('Invalid series'));
 		}
 		if ($this->Series->delete()) {
-			$this->Session->setFlash(__('Series was successfully deleted!', 'default', array('class' => 'success_message')));
+			$this->Session->setFlash('Series was successfully deleted!', 'default', array('class' => 'success_message'));
 			$this->redirect(array('action' => 'index'));
 		}
-		$this->Session->setFlash(__('Series was not deleted', 'default', array('class' => 'error_message')));
+		$this->Session->setFlash('Series was not deleted', 'default', array('class' => 'error_message'));
 		$this->redirect(array('action' => 'index'));
 	}
 }
