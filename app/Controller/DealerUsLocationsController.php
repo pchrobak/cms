@@ -33,7 +33,7 @@ class DealerUsLocationsController extends AppController {
 				$this->Session->setFlash('There was an error in saving this form.  Please make sure all require fields are filled in', 'default', array('class' => 'error_message'));
 			}
 		}
-		$states = $this->DealerUsLocation->State->find('list');
+		$states = $this->DealerUsLocation->State->find('list',array('order'=>'name asc'));
 		$this->set(compact('states'));
 	}
 
@@ -59,7 +59,7 @@ class DealerUsLocationsController extends AppController {
 		} else {
 			$this->request->data = $this->DealerUsLocation->read(null, $id);
 		}
-		$states = $this->DealerUsLocation->State->find('list');
+		$states = $this->DealerUsLocation->State->find('list',array('order'=>'name asc'));
 		$this->set(compact('states'));
 	}
 

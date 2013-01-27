@@ -1,6 +1,6 @@
 <div class="page-content">
-	<?php $this->Html->addCrumb('US Locations', '/dealer_us_locations');?>
-	<h3><?php echo __('US Dealer Locations Editor'); ?><button class="btn pull-right"><?php echo $this->Html->link(__('New US Location'), array('action' => 'add')); ?></button></h3>
+	<?php $this->Html->addCrumb('US & Canadian Locations', '/dealer_us_locations');?>
+	<h3><?php echo __('US & Canadian Dealer Locations Editor'); ?><button class="btn pull-right"><?php echo $this->Html->link(__('New Location'), array('action' => 'add')); ?></button></h3>
 	<table cellpadding="0" cellspacing="0" class="table table-bordered table-striped">
 	<tr>
 			<th><?php echo $this->Paginator->sort('id'); ?></th>

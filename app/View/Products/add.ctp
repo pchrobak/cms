@@ -27,6 +27,7 @@
 	  <li><a href="#gallery" data-toggle="tab">Image Gallery</a></li>
 	  <li><a href="#specs" data-toggle="tab">Product Specs</a></li>
 	  <li><a href="#downloads" data-toggle="tab">Product Downloads</a></li>
+	  <li><a href="#related_products" data-toggle="tab">Related Products</a>
 	</ul>
 	<div id="myTabContent" class="tab-content">
 		<div class="tab-pane fade" id="details">
@@ -84,6 +85,18 @@
 			<fieldset>
 			<?php
 				echo $this->Form->input('Download', array('label'=>''));
+				echo $this->Form->submit('Submit', array('class' => 'btn'));
+				echo $this->Form->end();?>
+			</fieldset>
+		</div>
+		
+		<!--CONTENT FOR RELATED PRODUCTS-->
+		<div class="tab-pane" id="related_products">
+		<br>
+			<?php echo $this->Form->create('Product'); ?>
+			<fieldset>
+			<?php
+				echo $this->Form->input('Ingredient', array('label'=>'Select Related Products'));
 				echo $this->Form->submit('Submit', array('class' => 'btn'));
 				echo $this->Form->end();?>
 			</fieldset>

@@ -98,6 +98,21 @@ class Product extends AppModel {
 			'finderQuery' => '',
 			'deleteQuery' => '',
 			'insertQuery' => ''
+		),
+		'Ingredient' => array(
+			'className' => 'Product',
+			'joinTable' => 'products_products',
+			'foreignKey' => 'product_id',
+			'associationForeignKey' => 'ingredient_id',
+			'unique' => true,
+			'conditions' => '',
+			'fields' => '',
+			'order' => '',
+			'limit' => '',
+			'offset' => '',
+			'finderQuery' => '',
+			'deleteQuery' => '',
+			'insertQuery' => ''
 		)
 	);
 
