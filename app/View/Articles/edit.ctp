@@ -1,5 +1,6 @@
 <?php echo $this->Html->script('ckeditor/ckeditor');?>
 <?php echo $this->Html->script('ckfinder/ckfinder.js');?>
+<?php echo $this->Html->script('jquery.picklists.js');?>
 
 	
 <div class="page-content">
@@ -34,4 +35,20 @@
 	
 	</fieldset>
 </div>
+
+<script type="text/javascript">
+	$(document).ready(function() {
+		$("#ProductProduct").pickList({
+		  buttons: true,
+		  beforeFrom: '',
+		  beforeTo: '',
+		  addText: '>>',
+		  addImage: '',
+		  removeText: '<<',
+		  removeImage: '',
+		  ieColor: '',
+		  ieBg: '#2b2b2b'
+		});	
+	});
+</script>
 

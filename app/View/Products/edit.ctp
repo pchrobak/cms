@@ -1,6 +1,7 @@
 <?php echo $this->Html->script('ckeditor/ckeditor');?>
 <?php echo $this->Html->script('ckfinder/ckfinder.js');?>
 <script src="http://twitter.github.com/bootstrap/assets/js/bootstrap-tab.js"></script>
+<?php echo $this->Html->script('jquery.picklists.js');?>
 <script type="text/javascript">
 function BrowseServer()
 {
@@ -118,5 +119,53 @@ function SetFileField( fileUrl )
 <script>
   $(function () {
     $('#myTab a:first').tab('show');
+	
+	$("#DownloadDownload").pickList({
+		  buttons: true,
+		  beforeFrom: '',
+		  beforeTo: '',
+		  addText: '>>',
+		  addImage: '',
+		  removeText: '<<',
+		  removeImage: '',
+		  ieColor: '',
+		  ieBg: '#2b2b2b'
+		});
+		
+	$("#IngredientIngredient").pickList({
+		  buttons: true,
+		  beforeFrom: '',
+		  beforeTo: '',
+		  addText: '>>',
+		  addImage: '',
+		  removeText: '<<',
+		  removeImage: '',
+		  ieColor: '',
+		  ieBg: '#2b2b2b'
+		});	
+		
+	$("#CategoryCategory").pickList({
+		  buttons: true,
+		  beforeFrom: '',
+		  beforeTo: '',
+		  addText: '>>',
+		  addImage: '',
+		  removeText: '<<',
+		  removeImage: '',
+		  ieColor: '',
+		  ieBg: '#2b2b2b'
+		});	
+	
+	$("#FinishFinish").pickList({
+		  buttons: true,
+		  beforeFrom: '',
+		  beforeTo: '',
+		  addText: '>>',
+		  addImage: '',
+		  removeText: '<<',
+		  removeImage: '',
+		  ieColor: '',
+		  ieBg: '#2b2b2b'
+		});	
   })
 </script>

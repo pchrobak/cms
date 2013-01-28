@@ -1,6 +1,6 @@
 <?php echo $this->Html->script('ckeditor/ckeditor');?>
 <?php echo $this->Html->script('ckfinder/ckfinder.js');?>
-
+<?php echo $this->Html->script('jquery.picklists.js');?>
 
 <div class="page-content">
 	<?php $this->Html->addCrumb('Articles', '/articles');
@@ -22,3 +22,18 @@
 	  <?php echo $this->Form->submit('Submit', array('class' => 'btn'));
 		echo $this->Form->end();?>
 </div>
+<script type="text/javascript">
+	$(document).ready(function() {
+		$("#ProductProduct").pickList({
+		  buttons: true,
+		  beforeFrom: '',
+		  beforeTo: '',
+		  addText: '>>',
+		  addImage: '',
+		  removeText: '<<',
+		  removeImage: '',
+		  ieColor: '',
+		  ieBg: '#2b2b2b'
+		});	
+	});
+</script>

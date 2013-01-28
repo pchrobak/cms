@@ -1,5 +1,6 @@
 <?php echo $this->Html->script('ckeditor/ckeditor');?>
 <?php echo $this->Html->script('ckfinder/ckfinder.js');?>
+<?php echo $this->Html->script('jquery.picklists.js');?>
 <script type="text/javascript">
 	function BrowseServer()
 	{
@@ -106,6 +107,54 @@
 <script>
   $(function () {
     $('#myTab a:first').tab('show');
+	
+	$("#DownloadDownload").pickList({
+		  buttons: true,
+		  beforeFrom: '',
+		  beforeTo: '',
+		  addText: '>>',
+		  addImage: '',
+		  removeText: '<<',
+		  removeImage: '',
+		  ieColor: '',
+		  ieBg: '#2b2b2b'
+		});
+		
+	$("#IngredientIngredient").pickList({
+		  buttons: true,
+		  beforeFrom: '',
+		  beforeTo: '',
+		  addText: '>>',
+		  addImage: '',
+		  removeText: '<<',
+		  removeImage: '',
+		  ieColor: '',
+		  ieBg: '#2b2b2b'
+		});	
+		
+	$("#CategoryCategory").pickList({
+		  buttons: true,
+		  beforeFrom: '',
+		  beforeTo: '',
+		  addText: '>>',
+		  addImage: '',
+		  removeText: '<<',
+		  removeImage: '',
+		  ieColor: '',
+		  ieBg: '#2b2b2b'
+		});	
+	
+	$("#FinishFinish").pickList({
+		  buttons: true,
+		  beforeFrom: '',
+		  beforeTo: '',
+		  addText: '>>',
+		  addImage: '',
+		  removeText: '<<',
+		  removeImage: '',
+		  ieColor: '',
+		  ieBg: '#2b2b2b'
+		});	
   })
 </script>
 
