@@ -113,6 +113,20 @@ class Product extends AppModel {
 			'finderQuery' => '',
 			'deleteQuery' => '',
 			'insertQuery' => ''
+		),'Article' => array(
+			'className' => 'Article',
+			'joinTable' => 'products_articles',
+			'foreignKey' => 'product_id',
+			'associationForeignKey' => 'article_id',
+			'unique' => true,
+			'conditions' => '',
+			'fields' => '',
+			'order' => '',
+			'limit' => '',
+			'offset' => '',
+			'finderQuery' => '',
+			'deleteQuery' => '',
+			'insertQuery' => ''
 		)
 	);
 

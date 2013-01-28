@@ -81,6 +81,7 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
 				  <li class="sidebar-indent"><?php echo $this->Html->link('Professional Reviews', array('controller' => 'professional_reviews', 'action' => 'index')); ?></li>
 				<li class="nav-header">Education</li>
 				  <li class="sidebar-indent"><?php echo $this->Html->link('FAQ\'s', array('controller' => 'faqs', 'action' => 'index')); ?></li>
+				  <li class="sidebar-indent"><?php echo $this->Html->link('Articles', array('controller' => 'articles', 'action' => 'index')); ?></li>
 				<li class="nav-header">Customer Service</li>
 				  <li class="sidebar-indent"><a href="#buttonGroups">Registration</a></li>
 				  <li class="sidebar-indent"><?php echo $this->Html->link('Customer Reviews', array('controller' => 'customer_reviews', 'action' => 'index')); ?></li>
