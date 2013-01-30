@@ -17,7 +17,6 @@ class DealerInternationalLocationsController extends AppController {
 		$this->set('dealerInternationalLocations', $this->paginate());
 	}
 
-
 /**
  * add method
  *

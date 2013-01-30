@@ -86,8 +86,9 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
 				  <li class="sidebar-indent"><a href="#buttonGroups">Registration</a></li>
 				  <li class="sidebar-indent"><?php echo $this->Html->link('Customer Reviews', array('controller' => 'customer_reviews', 'action' => 'index')); ?></li>
 				<li class="nav-header">Dealers</li>
-				  <li class="sidebar-indent"><?php echo $this->Html->link('US & Canadian Locations', array('controller' => 'dealer_us_locations', 'action' => 'index')); ?></li></li>
-				  <li class="sidebar-indent"><?php echo $this->Html->link('International Locations', array('controller' => 'dealer_international_locations', 'action' => 'index')); ?></li></li>
+				  <li class="sidebar-indent"><?php echo $this->Html->link('US & Canadian Locations', array('controller' => 'dealer_us_locations', 'action' => 'index')); ?></li>
+				  <li class="sidebar-indent"><?php echo $this->Html->link('International Locations', array('controller' => 'dealer_international_locations', 'action' => 'index')); ?></li>
+				   <li class="sidebar-indent"><?php echo $this->Html->link('Online Locations', array('controller' => 'dealer_online_locations', 'action' => 'index')); ?></li></li>
 				<li class="nav-header">Website Content</li>
 				  <li class="sidebar-indent"><?php echo $this->Html->link('Site pages', array('controller' => 'sitepages', 'action' => 'index')); ?></li>
             </ul>
