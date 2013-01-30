@@ -80,7 +80,7 @@ class DealerUsLocationsController extends AppController {
 			throw new NotFoundException(__('Invalid dealer us location'));
 		}
 		if ($this->DealerUsLocation->delete()) {
-		$this->Session->setFlash('You have successfully Deleted a Dealer Location!', 'default', array('class' => 'success_message'));
+			$this->Session->setFlash('You have successfully Deleted a Dealer Location!', 'default', array('class' => 'success_message'));
 			$this->redirect(array('action' => 'index'));
 		}
 		$this->Session->setFlash('The Dealer Location was not deleted. Please try again', 'default', array('class' => 'error_message'));
