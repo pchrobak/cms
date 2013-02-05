@@ -10,7 +10,6 @@
 		<legend><?php echo __('Add Product'); ?> <button class="btn pull-right"><?php echo $this->Html->link(__('List Product'), array('action' => 'index')); ?></button></legend>
 	<ul class="nav nav-tabs" id="myTab">
 	  <li><a href="#details" data-toggle="tab" class="active">Product Details</a></li>
-	  <li><a href="#gallery" data-toggle="tab">Image Gallery</a></li>
 	  <li><a href="#specs" data-toggle="tab">Product Specs</a></li>
 	  <li><a href="#downloads" data-toggle="tab">Product Downloads</a></li>
 	  <li><a href="#related_products" data-toggle="tab">Related Products</a>
@@ -39,11 +38,6 @@
 				echo $this->Form->end();?>
 			
 			</fieldset>
-		</div>
-		
-		<!--CONTENT FOR IMAGE GALLERY-->
-		<div class="tab-pane" id="gallery">
-			<p>image gallery here</p>
 		</div>
 		
 		<!--CONTENT FOR SPECS-->

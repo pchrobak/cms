@@ -22,7 +22,6 @@
 		
 	<ul class="nav nav-tabs" id="myTab">
 	  <li><a href="#details" data-toggle="tab" class="active">Product Details</a></li>
-	  <li><a href="#gallery" data-toggle="tab">Image Gallery</a></li>
 	  <li><a href="#specs" data-toggle="tab">Product Specs</a></li>
 	  <li><a href="#downloads" data-toggle="tab">Product Downloads</a></li>
 	  <li><a href="#related_products" data-toggle="tab">Related Products</a></li>
@@ -42,7 +41,7 @@
 					<label for="ProductProductImage">Main Product Image</label>
 					
 					<input type="file" name="data[Product][product_image]" value="data[Product][product_image]" id="ProductProductImage"/>
-				</div><?php
+				<?php
 				echo $this->Form->input('quick_description', array('class' => 'input-xxlarge'));
 				echo $this->Form->input('body_copy', array('class' => 'ckeditor'));
 				echo $this->Form->input('priced_per', array('class' => 'input-xlarge', 'options'=> array('each'=>'each','pair'=>'pair','system'=>'system'), 'empty'=>'Select Unit of Measure', 'label'=>'Unit Of Measure'));
@@ -56,10 +55,7 @@
 			</fieldset>
 		</div>
 		
-		<!--CONTENT FOR IMAGE GALLERY-->
-		<div class="tab-pane" id="gallery">
-			<p>image gallery here</p>
-		</div>
+		
 		
 		<!--CONTENT FOR SPECS-->
 		<div class="tab-pane" id="specs">
