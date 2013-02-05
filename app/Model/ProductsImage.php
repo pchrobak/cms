@@ -23,9 +23,9 @@ class ProductsImage extends AppModel {
                     'dir' => 'photo_dir'
                 ),
                 'thumbnailSizes' => array(
-                    'large' => '1024x768',
-                    'small' => '640x480',
-                    'thumb' => '100x100'
+                    'large' => '800x600',
+                    'small' => '220x165',
+                    'thumb' => '40x40'
                 )
             )
         )

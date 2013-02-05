@@ -19,9 +19,9 @@ class HeroSpot extends AppModel {
                     'dir' => 'photo_dir'
                 ),
                 'thumbnailSizes' => array(
-                    'large' => '1024x768',
-                    'small' => '640x480',
-                    'thumb' => '100x100'
+                    'large' => '940x500',
+					'small' => '380x200',
+					'thumbnail' => '140x70'
                 )
             )
         )

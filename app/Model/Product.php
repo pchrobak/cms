@@ -22,9 +22,9 @@ class Product extends AppModel {
                     'dir' => 'photo_dir'
                 ),
                 'thumbnailSizes' => array(
-                    'large' => '1024x768',
-                    'small' => '640x480',
-                    'thumb' => '100x100'
+                    'large' => '800x600',
+                    'small' => '460x345',
+                    'thumb' => '220x165'
                 )
             )
         )
