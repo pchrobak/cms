@@ -13,7 +13,21 @@ class Finish extends AppModel {
  * @var string
  */
 	public $displayField = 'name';
-
+	
+	public $actsAs = array(
+        'Upload.Upload' => array(
+            'filename' => array(
+                'fields' => array(
+                    'dir' => 'photo_dir'
+                ),
+                'thumbnailSizes' => array(
+                    'large' => '1024x768',
+                    'small' => '640x480',
+                    'thumb' => '100x100'
+                )
+            )
+        )
+    );
 
 	//The Associations below have been created with all possible keys, those that are not needed can be removed
 

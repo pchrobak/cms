@@ -14,6 +14,21 @@ class Series extends AppModel {
  */
 	public $displayField = 'series_name';
 	
+	public $actsAs = array(
+        'Upload.Upload' => array(
+            'series_image' => array(
+                'fields' => array(
+                    'dir' => 'photo_dir'
+                ),
+                'thumbnailSizes' => array(
+                    'large' => '1024x768',
+                    'small' => '640x480',
+                    'thumb' => '100x100'
+                )
+            )
+        )
+    );
+	
 	public $validate = array(
 		'series_name' => array(
             'rule'    => 'notEmpty',

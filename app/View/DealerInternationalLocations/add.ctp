@@ -29,13 +29,7 @@
 		echo $this->Form->input('company_name', array('class' => 'input-xxlarge'));
 		echo $this->Form->input('address', array('class' => 'ckeditor'));
 		echo $this->Form->input('phone', array('class' => 'input-xxlarge'));
-		echo $this->Form->input('website', array('class' => 'input-xxlarge'));?>
-				<div class="input text">
-					<label for="Logo">Product Image</label>
-					<input id="xFilePath" name="data[DealerInternationalLocation][logo]"  type="text" class="input-xlarge">
-					<input type="button" class="btn" style="margin:0 0 10px 15px;" value="Browse Server" onclick="BrowseServer();" />
-				</div>
-				<?php
+		echo $this->Form->input('website', array('class' => 'input-xxlarge'));
 		echo $this->Form->submit('Submit', array('class' => 'btn'));
 		echo $this->Form->end();?>
 	

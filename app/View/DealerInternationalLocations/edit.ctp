@@ -1,23 +1,5 @@
 <?php echo $this->Html->script('ckeditor/ckeditor');?>
 <?php echo $this->Html->script('ckfinder/ckfinder.js');?>
-<script type="text/javascript">
-function BrowseServer()
-{
-	// You can use the "CKFinder" class to render CKFinder in a page:
-	var finder = new CKFinder();
-	finder.basePath = '../';	// The path for the installation of CKFinder (default = "/ckfinder/").
-	finder.startupPath = "Files:/dealers/logos";
-	finder.selectActionFunction = SetFileField;
-	finder.popup();
-}
-
-// This is a sample function which is called when a file is selected in CKFinder.
-function SetFileField( fileUrl )
-{
-	document.getElementById( 'xFilePath' ).value = fileUrl;
-}
-</script>
-
 	
 	
 <div class="page-content">
@@ -45,13 +27,7 @@ function SetFileField( fileUrl )
 		echo $this->Form->input('company_name', array('class' => 'input-xxlarge'));
 		echo $this->Form->input('address', array('class' => 'ckeditor'));
 		echo $this->Form->input('phone', array('class' => 'input-xxlarge'));
-		echo $this->Form->input('website', array('class' => 'input-xxlarge'));?>
-				<div class="input text">
-					<label for="Logo">Product Image</label>
-					<input id="xFilePath" name="data[DealerInternationalLocation][logo]" value="<?php echo $this->data["DealerInternationalLocation"]["logo"]?>" type="text" class="input-xlarge">
-					<input type="button" class="btn" style="margin:0 0 10px 15px;" value="Browse Server" onclick="BrowseServer();" />
-				</div>
-				<?php
+		echo $this->Form->input('website', array('class' => 'input-xxlarge'));
 		echo $this->Form->submit('Submit', array('class' => 'btn'));
 		echo $this->Form->end();?>
 	

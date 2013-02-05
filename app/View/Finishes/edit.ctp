@@ -1,23 +1,5 @@
 <?php echo $this->Html->script('ckeditor/ckeditor');?>
 <?php echo $this->Html->script('ckfinder/ckfinder.js');?>
-<script type="text/javascript">
-function BrowseServer()
-{
-	// You can use the "CKFinder" class to render CKFinder in a page:
-	var finder = new CKFinder();
-	finder.basePath = '../';	// The path for the installation of CKFinder (default = "/ckfinder/").
-	finder.selectActionFunction = SetFileField;
-	finder.startupPath = "Images:/Finishes/";
-	finder.popup();
-}
-
-// This is a sample function which is called when a file is selected in CKFinder.
-function SetFileField( fileUrl )
-{
-	document.getElementById( 'xFilePath' ).value = fileUrl;
-}
-</script>
-
 	
 	
 <div class="page-content">
@@ -37,16 +19,16 @@ function SetFileField( fileUrl )
 			</div>
 		</legend>
 
-		<?php echo $this->Form->create('Finish'); ?>
+		<?php echo $this->Form->create('Finish', array('type' => 'file')); ?>
 	<?php
 		echo $this->Form->input('id');
 		echo $this->Form->input('name', array('class'=>'input-xxlarge'));?>
-	<div class="input text">
-			<label for="FinishFilename">Finish Image</label>
-			<input id="xFilePath" name="data[Finish][filename]" value="<?php echo $this->data["Finish"]["filename"]?>" type="text" class="input-xlarge">
-			<input type="button" class="btn" style="margin:0 0 10px 15px;" value="Browse Server" onclick="BrowseServer();" />
-		</div>
-	    <?php echo $this->Form->submit('Submit', array('class' => 'btn'));
+		<div class="input file">
+			<?php echo $this->Html->image('thumbs/thumb_'.$this->data['Finish']['filename'], array('fullBase' => true, 'align'=>'right'));?>
+			<label for="FinishImage">Finish Image</label>
+			
+			<input type="file" name="data[Finish][filename]" value="data[Finish][filename]" id="FinishImage"/>
+		</div><?php echo $this->Form->submit('Submit', array('class' => 'btn'));
 		echo $this->Form->end();?>
 	
 	</fieldset>

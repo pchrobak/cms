@@ -2,22 +2,6 @@
 <?php echo $this->Html->script('ckfinder/ckfinder.js');?>
 <script src="http://twitter.github.com/bootstrap/assets/js/bootstrap-tab.js"></script>
 <?php echo $this->Html->script('jquery.picklists.js');?>
-<script type="text/javascript">
-function BrowseServer()
-{
-	// You can use the "CKFinder" class to render CKFinder in a page:
-	var finder = new CKFinder();
-	finder.basePath = '../';	// The path for the installation of CKFinder (default = "/ckfinder/").
-	finder.selectActionFunction = SetFileField;
-	finder.popup();
-}
-
-// This is a sample function which is called when a file is selected in CKFinder.
-function SetFileField( fileUrl )
-{
-	document.getElementById( 'xFilePath' ).value = fileUrl;
-}
-</script>
 
 <div class="page-content">
 	<?php $this->Html->addCrumb('Products', '/products');
@@ -45,7 +29,7 @@ function SetFileField( fileUrl )
 	</ul>
 	<div id="myTabContent" class="tab-content">
 		<div class="tab-pane fade" id="details">
-			<?php echo $this->Form->create('Product'); ?>
+			<?php echo $this->Form->create('Product', array('type' => 'file')); ?>
 			<fieldset>
 			<?php
 				echo $this->Form->input('id');
@@ -54,12 +38,11 @@ function SetFileField( fileUrl )
 				echo $this->Form->input('series_id',array('empty' => 'Select a Series'));
 				echo $this->Form->input('Category');
 				echo $this->Form->input('Finish');?>
-				<div class="input text">
-					<label for="ProductsImage">Product Image</label>
-					<input id="xFilePath" name="data[Product][product_image]" value="<?php echo $this->data["Product"]["product_image"]?>" type="text" class="input-xlarge">
-					<input type="button" class="btn" style="margin:0 0 10px 15px;" value="Browse Server" onclick="BrowseServer();" />
-				</div>
-				<?php
+				<?php echo $this->Html->image('thumbs/thumb_'.$this->data['Product']['product_image'], array('fullBase' => true, 'align'=>'right'));?>
+					<label for="ProductProductImage">Main Product Image</label>
+					
+					<input type="file" name="data[Product][product_image]" value="data[Product][product_image]" id="ProductProductImage"/>
+				</div><?php
 				echo $this->Form->input('quick_description', array('class' => 'input-xxlarge'));
 				echo $this->Form->input('body_copy', array('class' => 'ckeditor'));
 				echo $this->Form->input('priced_per', array('class' => 'input-xlarge', 'options'=> array('each'=>'each','pair'=>'pair','system'=>'system'), 'empty'=>'Select Unit of Measure', 'label'=>'Unit Of Measure'));

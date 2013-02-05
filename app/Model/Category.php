@@ -14,6 +14,21 @@ class Category extends AppModel {
  */
 	public $displayField = 'name';
 	
+	public $actsAs = array(
+        'Upload.Upload' => array(
+            'overview_image' => array(
+                'fields' => array(
+                    'dir' => 'photo_dir'
+                ),
+                'thumbnailSizes' => array(
+                    'large' => '1024x768',
+                    'small' => '640x480',
+                    'thumb' => '100x100'
+                )
+            )
+        )
+    );
+	
 	public $validate = array(
 		'name' => array(
             'rule'    => 'notEmpty',

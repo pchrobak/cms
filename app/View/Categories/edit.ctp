@@ -1,21 +1,5 @@
 <?php echo $this->Html->script('ckeditor/ckeditor');?>
 <?php echo $this->Html->script('ckfinder/ckfinder.js');?>
-<script type="text/javascript">
-function BrowseServer()
-{
-	// You can use the "CKFinder" class to render CKFinder in a page:
-	var finder = new CKFinder();
-	finder.basePath = '../';	// The path for the installation of CKFinder (default = "/ckfinder/").
-	finder.selectActionFunction = SetFileField;
-	finder.popup();
-}
-
-// This is a sample function which is called when a file is selected in CKFinder.
-function SetFileField( fileUrl )
-{
-	document.getElementById( 'xFilePath' ).value = fileUrl;
-}
-</script>
 
 <div class="page-content">
 	<?php $this->Html->addCrumb('Categories', '/categories');
@@ -33,7 +17,7 @@ function SetFileField( fileUrl )
 		<li><?php echo $this->Html->link(__('List Categories'), array('action' => 'index')); ?></li></ul>
 			</div>
 		</legend>
-<?php echo $this->Form->create('Category'); ?>
+<?php echo $this->Form->create('Category', array('type' => 'file')); ?>
 	<fieldset>
 	<?php
 		echo $this->Form->input('id');
@@ -41,13 +25,12 @@ function SetFileField( fileUrl )
 		echo $this->Form->input('subcategory', array('type'=>'select', 'options' => $subcat, 'empty' => 'Select subcategory if applicable','class' => 'input-xlarge'));
 
 		echo $this->Form->input('name', array('class' => 'input-xxlarge'));?>
-		<div class="input text">
-			<label for="SeriesImage">Overview Image</label>
-			<input id="xFilePath" name="data[Category][overview_image]" value="<?php echo $this->data["Category"]["overview_image"]?>" type="text" class="input-xlarge">
-			<input type="button" class="btn" style="margin:0 0 10px 15px;" value="Browse Server" onclick="BrowseServer();" />
-		</div>
-
-		<?php echo $this->Form->input('overview', array('class' => 'ckeditor'));
+		<div class="input file">
+			<?php echo $this->Html->image('thumbs/thumb_'.$this->data['Category']['overview_image'], array('fullBase' => true, 'align'=>'right'));?>
+			<label for="CategoryOverviewImage">Overview Image</label>
+			
+			<input type="file" name="data[Category][overview_image]" value="data[Category][overview_image]" id="CategoryOverviewImage"/>
+		</div><?php echo $this->Form->input('overview', array('class' => 'ckeditor'));
 		echo $this->Form->input('meta_title', array('class' => 'input-xxlarge'));
 		echo $this->Form->input('meta_description', array('class' => 'input-xxlarge'));
 		echo $this->Form->input('meta_keywords', array('class' => 'input-xxlarge'));
