@@ -91,10 +91,10 @@ class ProductsController extends AppController {
 			throw new NotFoundException(__('Invalid product'));
 		}
 		if ($this->Product->delete()) {
-			$this->Session->setFlash(__('Product was successfully deleted!', 'default', array('class' => 'success_message')));
+			$this->Session->setFlash('Product was successfully deleted!', 'default', array('class' => 'success_message'));
 			$this->redirect(array('action' => 'index'));
 		}
-		$this->Session->setFlash(__('Product was not deleted', 'default', array('class' => 'error_message')));
+		$this->Session->setFlash('Product was not deleted', 'default', array('class' => 'error_message'));
 		$this->redirect(array('action' => 'index'));
 	}
 }

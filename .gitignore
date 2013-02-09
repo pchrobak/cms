@@ -1,3 +1,4 @@
 app/tmp
 vendors/
 database.php
+app/webroot/img

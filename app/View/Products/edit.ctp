@@ -49,8 +49,7 @@
 				echo $this->Form->input('meta_keywords', array('class' => 'input-xxlarge'));
 				echo $this->Form->input('meta_title', array('class' => 'input-xxlarge'));
 				echo $this->Form->input('meta_description', array('class' => 'input-xxlarge'));
-				echo $this->Form->submit('Submit', array('class' => 'btn'));
-				echo $this->Form->end();?>
+				echo $this->Form->submit('Submit', array('class' => 'btn'));?>
 			
 			</fieldset>
 		</div>
@@ -65,8 +64,7 @@
 			<?php
 				echo $this->Form->input('id');
 				echo $this->Form->input('specs', array('class' => 'ckeditor', 'label'=>''));
-				echo $this->Form->submit('Submit', array('class' => 'btn'));
-				echo $this->Form->end();?>
+				echo $this->Form->submit('Submit', array('class' => 'btn'));?>
 			
 			</fieldset>
 		</div>
@@ -78,8 +76,7 @@
 			<fieldset>
 			<?php
 				echo $this->Form->input('Download', array('label'=>''));
-				echo $this->Form->submit('Submit', array('class' => 'btn'));
-				echo $this->Form->end();?>
+				echo $this->Form->submit('Submit', array('class' => 'btn'));?>
 			</fieldset>
 		</div>
 		
