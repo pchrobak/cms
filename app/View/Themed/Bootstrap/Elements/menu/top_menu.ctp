@@ -8,7 +8,7 @@
 		<span class="icon-bar"></span>
 		<span class="icon-bar"></span>
 	  </a>
-	  <a class="brand" href="/cms">Company CMS</a>
+	  <a class="brand" href="/cms">D+B MAE</a>
 	  <div class="nav-collapse collapse">
 		<p class="navbar-text pull-right">
 		 <?php if($this->Session->read('Auth.User')){?>
