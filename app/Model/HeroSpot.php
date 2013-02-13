@@ -20,8 +20,7 @@ class HeroSpot extends AppModel {
                 ),
                 'thumbnailSizes' => array(
                     'large' => '940x500',
-					'small' => '380x200',
-					'thumbnail' => '140x70'
+					'thumb' => '140x70'
                 )
             )
         )

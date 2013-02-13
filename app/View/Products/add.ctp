@@ -25,8 +25,13 @@
 				echo $this->Form->input('name', array('class' => 'input-xxlarge'));
 				echo $this->Form->input('series_id',array('empty' => 'Select a Series'));
 				echo $this->Form->input('Category');
-				echo $this->Form->input('Finish');
-				echo $this->Form->input('product_image', array('type' => 'file'));
+				echo $this->Form->input('Finish');?>
+				<div class="input file">
+					<label for="ProductProductImage">Product Image</label>
+					<input type="file" name="data[Product][product_image]"  id="ProductProductImage"/><br>
+					<small>Please Ensure image is 800x600</small>
+				</div>
+				<?php
 				echo $this->Form->input('photo_dir', array('type' => 'hidden'));
 				echo $this->Form->input('quick_description', array('class' => 'input-xxlarge'));
 				echo $this->Form->input('body_copy', array('class' => 'ckeditor'));
@@ -43,7 +48,6 @@
 		<!--CONTENT FOR SPECS-->
 		<div class="tab-pane" id="specs">
 		<h5>Specifications</h5>
-			<?php echo $this->Form->create('Product'); ?>
 			<fieldset>
 			<?php
 				echo $this->Form->input('id');
@@ -56,7 +60,6 @@
 		<!--CONTENT FOR DOWNLOADS-->
 		<div class="tab-pane" id="downloads">
 		<h5>Downloads</h5>
-			<?php echo $this->Form->create('Product'); ?>
 			<fieldset>
 			<?php
 				echo $this->Form->input('Download', array('label'=>''));
@@ -67,7 +70,6 @@
 		<!--CONTENT FOR RELATED PRODUCTS-->
 		<div class="tab-pane" id="related_products">
 		<br>
-			<?php echo $this->Form->create('Product'); ?>
 			<fieldset>
 			<?php
 				echo $this->Form->input('Ingredient', array('label'=>'Select Related Products'));

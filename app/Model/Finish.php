@@ -19,11 +19,6 @@ class Finish extends AppModel {
             'filename' => array(
                 'fields' => array(
                     'dir' => 'photo_dir'
-                ),
-                'thumbnailSizes' => array(
-                    'large' => '1024x768',
-                    'small' => '640x480',
-                    'thumb' => '100x100'
                 )
             )
         )

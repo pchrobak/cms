@@ -5,9 +5,13 @@
 		<fieldset>
 			<legend><?php echo __('Add Image'); ?> <button class="btn pull-right"><?php echo $this->Html->link(__('List Images'), array('action' => 'index')); ?></button></legend>
 		<?php
-		echo $this->Form->input('products_id');
-		echo $this->Form->input('filename', array('type' => 'file'));
-		echo $this->Form->input('photo_dir', array('type' => 'hidden'));
+		echo $this->Form->input('products_id');?>
+		<div class="input file">
+			<label for="ProductsImageFilename">Filename</label>
+			<input type="file" name="data[ProductsImage][filename]"  id="ProductsImageFilename"/><br>
+			<small>Please Ensure image is 800x600</small>
+		</div>
+		<?php echo $this->Form->input('photo_dir', array('type' => 'hidden'));
 		echo $this->Form->input('alt_description');
 	?>
 		</fieldset>

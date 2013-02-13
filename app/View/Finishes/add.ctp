@@ -8,9 +8,13 @@
 		<fieldset>
 			<legend><?php echo __('Add a Finish'); ?> <button class="btn pull-right"><?php echo $this->Html->link(__('List Finishes'), array('action' => 'index')); ?></button></legend>
 		<?php
-		echo $this->Form->input('name', array('class'=>'input-xxlarge'));
-		echo $this->Form->input('logo', array('type' => 'file'));
-		echo $this->Form->input('photo_dir', array('type' => 'hidden'));
+		echo $this->Form->input('name', array('class'=>'input-xxlarge'));?>
+		<div class="input file">
+			<label for="FinishFilename">Finish Image</label>
+			<input type="file" name="data[Finish][filename]"  id="FinishFilename"/><br>
+			<small>Please Ensure image is 30x30</small>
+		</div>
+		<?php echo $this->Form->input('photo_dir', array('type' => 'hidden'));
 		?>
 		</fieldset>
 	  <?php echo $this->Form->submit('Submit', array('class' => 'btn'));

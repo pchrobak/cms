@@ -20,10 +20,10 @@
 		echo $this->Form->input('id');
 		echo $this->Form->input('products_id');?>
 		<div class="input file">
-			<?php echo $this->Html->image('thumbs/thumb_'.$this->data['ProductsImage']['filname'], array('fullBase' => true, 'align'=>'right'));?>
-			<label for="FilenameImage">Image</label>
-			
-			<input type="file" name="data[ProductsImage][filname]" value="data[ProductsImage][filname]" id="FilenameImage"/>
+			<label for="FilenameImage">Image</label><br>
+			<?php echo $this->Html->image('thumbs/small_'.$this->data['ProductsImage']['filename'], array('fullBase' => true, 'vspace'=>'5'));?>
+			<input type="file" name="data[ProductsImage][filname]" value="data[ProductsImage][filname]" id="FilenameImage"/><br>
+			<small>Please Ensure image is 800x600</small>
 		</div><?php
 		echo $this->Form->input('photo_dir', array('type' => 'hidden'));
 		echo $this->Form->input('alt_description');

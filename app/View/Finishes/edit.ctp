@@ -24,10 +24,10 @@
 		echo $this->Form->input('id');
 		echo $this->Form->input('name', array('class'=>'input-xxlarge'));?>
 		<div class="input file">
-			<?php echo $this->Html->image('thumbs/thumb_'.$this->data['Finish']['filename'], array('fullBase' => true, 'align'=>'right'));?>
-			<label for="FinishImage">Finish Image</label>
-			
-			<input type="file" name="data[Finish][filename]" value="data[Finish][filename]" id="FinishImage"/>
+			<label for="FinishImage">Finish Image</label><br>
+			<?php echo $this->Html->image($this->data['Finish']['filename'], array('fullBase' => true, 'vspace'=>'5'));?><br>
+			<input type="file" name="data[Finish][filename]" value="data[Finish][filename]" id="FinishImage"/><br>
+			<small>Please Ensure image is 30x30</small>
 		</div><?php echo $this->Form->submit('Submit', array('class' => 'btn'));
 		echo $this->Form->end();?>
 	

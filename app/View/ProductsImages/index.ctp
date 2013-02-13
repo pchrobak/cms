@@ -5,7 +5,6 @@
 
 	<tr>
 			<th><?php echo $this->Paginator->sort('id'); ?></th>
-			<th><?php echo $this->Paginator->sort('products_id'); ?></th>
 			<th><?php echo $this->Paginator->sort('filename'); ?></th>
 			<th><?php echo $this->Paginator->sort('alt_description'); ?></th>
 			<th><?php echo $this->Paginator->sort('updated'); ?></th>
@@ -16,9 +15,6 @@
 	foreach ($productsImages as $productsImage): ?>
 	<tr>
 		<td><?php echo h($productsImage['ProductsImage']['id']); ?>&nbsp;</td>
-		<td>
-			<?php echo $this->Html->link($productsImage['Products']['name'], array('controller' => 'products', 'action' => 'view', $productsImage['Products']['id'])); ?>
-		</td>
 		<td><?php echo h($productsImage['ProductsImage']['filename']); ?>&nbsp;</td>
 		<td><?php echo h($productsImage['ProductsImage']['alt_description']); ?>&nbsp;</td>
 		<td><?php echo h($productsImage['ProductsImage']['updated']); ?>&nbsp;</td>

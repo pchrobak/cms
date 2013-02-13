@@ -18,21 +18,6 @@ class CustomerReviewsController extends AppController {
 	}
 
 /**
- * view method
- *
- * @throws NotFoundException
- * @param string $id
- * @return void
- */
-	public function view($id = null) {
-		$this->CustomerReview->id = $id;
-		if (!$this->CustomerReview->exists()) {
-			throw new NotFoundException(__('Invalid customer review'));
-		}
-		$this->set('customerReview', $this->CustomerReview->read(null, $id));
-	}
-
-/**
  * add method
  *
  * @return void

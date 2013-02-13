@@ -11,7 +11,14 @@
 		echo $this->Form->input('visible');
 		echo $this->Form->input('sort');
 		echo $this->Form->input('title', array('class'=>'input-xxlarge'));
-		echo $this->Form->input('hero_image', array('type' => 'file'));
+		?>	
+		<div class="input file">
+			<label for="HeroSpotHeroImage">Hero Image</label>
+			<input type="file" name="data[HeroSpot][hero_image]"  id="HeroSpotHeroImage"/><br>
+			<small>Please Ensure image is 960x500</small>
+		</div>
+		
+		<?php
 		echo $this->Form->input('photo_dir', array('type' => 'hidden'));
 		echo $this->Form->input('link', array('class'=>'input-xxlarge'));
 	    echo $this->Form->submit('Submit', array('class' => 'btn'));

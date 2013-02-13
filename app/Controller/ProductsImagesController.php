@@ -18,21 +18,6 @@ class ProductsImagesController extends AppController {
 	}
 
 /**
- * view method
- *
- * @throws NotFoundException
- * @param string $id
- * @return void
- */
-	public function view($id = null) {
-		$this->ProductsImage->id = $id;
-		if (!$this->ProductsImage->exists()) {
-			throw new NotFoundException(__('Invalid products image'));
-		}
-		$this->set('productsImage', $this->ProductsImage->read(null, $id));
-	}
-
-/**
  * add method
  *
  * @return void
@@ -41,10 +26,10 @@ class ProductsImagesController extends AppController {
 		if ($this->request->is('post')) {
 			$this->ProductsImage->create();
 			if ($this->ProductsImage->save($this->request->data)) {
-				$this->Session->setFlash(__('The products image has been saved'));
+				$this->Session->setFlash('You have successfully Saved a Gallery Image!', 'default', array('class' => 'success_message'));
 				$this->redirect(array('action' => 'index'));
 			} else {
-				$this->Session->setFlash(__('The products image could not be saved. Please, try again.'));
+				$this->Session->setFlash('There was an error in saving this form.  Please make sure all require fields are filled in', 'default', array('class' => 'error_message'));
 			}
 		}
 		$products = $this->ProductsImage->Product->find('list');
@@ -65,10 +50,10 @@ class ProductsImagesController extends AppController {
 		}
 		if ($this->request->is('post') || $this->request->is('put')) {
 			if ($this->ProductsImage->save($this->request->data)) {
-				$this->Session->setFlash(__('The products image has been saved'));
+				$this->Session->setFlash('You have successfully Saved a Product Gallery Image!', 'default', array('class' => 'success_message'));
 				$this->redirect(array('action' => 'index'));
 			} else {
-				$this->Session->setFlash(__('The products image could not be saved. Please, try again.'));
+				$this->Session->setFlash('There was an error in saving this form.  Please make sure all require fields are filled in', 'default', array('class' => 'error_message'));
 			}
 		} else {
 			$this->request->data = $this->ProductsImage->read(null, $id);
@@ -94,10 +79,10 @@ class ProductsImagesController extends AppController {
 			throw new NotFoundException(__('Invalid products image'));
 		}
 		if ($this->ProductsImage->delete()) {
-			$this->Session->setFlash(__('Products image deleted'));
+			$this->Session->setFlash('Product Gallery Image was successfully deleted!', 'default', array('class' => 'success_message'));
 			$this->redirect(array('action' => 'index'));
 		}
-		$this->Session->setFlash(__('Products image was not deleted'));
+		$this->Session->setFlash('Product Gallery Image was not deleted', 'default', array('class' => 'error_message'));
 		$this->redirect(array('action' => 'index'));
 	}
 }
