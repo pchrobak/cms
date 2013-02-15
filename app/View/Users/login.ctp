@@ -6,7 +6,7 @@
       }
 </style>
 <div class="container">
-<h3>Company CMS Login</h3>
+<h3>D+B MAE</h3>
 	<div class="login-form">
 		<?php echo $this->Form->create('User'); ?>
 			<fieldset>
