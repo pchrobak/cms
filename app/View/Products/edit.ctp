@@ -6,10 +6,10 @@
 <div class="page-content">
 	<?php $this->Html->addCrumb('Products', '/products');
 	  $this->Html->addCrumb('Edit '.$this->data["Product"]["name"], '/products');?>
-	
 	<fieldset>
 		<legend><?php echo "Edit ".$this->data["Product"]["name"]; ?>
 			<div class="btn-group pull-right">
+				<?php echo $this->Html->link('Preview '.$this->data["Product"]["name"], PRODUCTPREVIEWURL.$this->data["Product"]["prod_directory"], array('class' => 'btn', 'target' => '_blank'));?>
 				<button class="btn">Actions</button>
 				<button class="btn dropdown-toggle" data-toggle="dropdown">
 					<span class="caret"></span>
@@ -34,6 +34,7 @@
 				echo $this->Form->input('id');
 				echo $this->Form->input('visible');
 				echo $this->Form->input('featured');
+				echo $this->Form->input('show_price');
 				echo $this->Form->input('name', array('class' => 'input-xxlarge'));
 				echo $this->Form->input('series_id',array('empty' => 'Select a Series'));
 				echo $this->Form->input('Category');

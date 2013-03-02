@@ -180,3 +180,7 @@ CakeLog::config('error', array(
 	'types' => array('warning', 'error', 'critical', 'alert', 'emergency'),
 	'file' => 'error',
 ));
+
+//Site constants
+define("PRODUCTPREVIEWURL", "http://cemarketingpros.com/demo/cecompany/products/?prod_name=");
+define("LISTURL", "/products");

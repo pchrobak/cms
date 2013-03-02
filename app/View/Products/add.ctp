@@ -22,6 +22,7 @@
 				echo $this->Form->input('id');
 				echo $this->Form->input('visible');
 				echo $this->Form->input('featured');
+				echo $this->Form->input('show_price');
 				echo $this->Form->input('name', array('class' => 'input-xxlarge'));
 				echo $this->Form->input('series_id',array('empty' => 'Select a Series'));
 				echo $this->Form->input('Category');

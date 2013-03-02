@@ -13,11 +13,14 @@
 	font-size:smaller;}
 	
 legend{border:none !important;	}
-
+}
 .sidebar-indent{padding-left:10px;}
 .well{
 	background-color:#fff !important;
 }
+
+.delete_item {color:#fff;}
+.delete_item a:hover  {color:#fff;}
 /***************************************************************************************************
 /	FLASH MESSAGES
 /***************************************************************************************************/
@@ -56,7 +59,7 @@ legend{border:none !important;	}
   box-shadow:rgba(0, 0, 0, 0.0745098) 0 1px 1px inset !important;
  }
  
-
+#cke_ProductBodyCopy {margin: 10px 0 20px 0;}
 /***************************************************************************************************
 /	LOGIN PAGE AND AUTH UTILITIES
 /***************************************************************************************************/
