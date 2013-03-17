@@ -22,6 +22,7 @@
 	<?php
 		echo $this->Form->input('id');
 		echo $this->Form->input('visible');
+		echo $this->Form->input('show_in_footer');
 		echo $this->Form->input('subcategory', array('type'=>'select', 'options' => $subcat, 'empty' => 'Select subcategory if applicable','class' => 'input-xlarge'));
 
 		echo $this->Form->input('name', array('class' => 'input-xxlarge'));?>

@@ -5,6 +5,7 @@
 	<tr>
 			<th><?php echo $this->Paginator->sort('id'); ?></th>
 			<th><?php echo $this->Paginator->sort('visible'); ?></th>
+			<th><?php echo $this->Paginator->sort('show_in_footer'); ?></th>
 			<th><?php echo $this->Paginator->sort('name'); ?></th>
 			<th><?php echo $this->Paginator->sort('created'); ?></th>
 			<th class="actions"><?php echo __('Actions'); ?></th>
@@ -14,6 +15,7 @@
 	<tr>
 		<td><?php echo h($category['Category']['id']); ?>&nbsp;</td>
 		<td><?php if($category['Category']['visible'] == 1){?><img src='img/test-pass-icon.png'><?php }else{?><img src='img/test-fail-icon.png'><?php }?></td>
+		<td><?php if($category['Category']['show_in_footer'] == 1){?><img src='img/test-pass-icon.png'><?php }else{?><img src='img/test-fail-icon.png'><?php }?></td>
 		<td><?php echo h($category['Category']['name']); ?>&nbsp;</td>
 		<td><?php echo h($category['Category']['created']); ?>&nbsp;</td>
 		<td class="actions">
