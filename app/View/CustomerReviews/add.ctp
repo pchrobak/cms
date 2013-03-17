@@ -3,7 +3,7 @@
 <div class="page-content">
 	<?php $this->Html->addCrumb('Customer Reviews', '/customer_reviews');
 		  $this->Html->addCrumb('Add a Customer Review', '/customer_reviews/add');?>
-	<?php echo $this->Form->create('Series'); ?>
+	<?php echo $this->Form->create('CustomerReview'); ?>
 		<fieldset>
 			<legend><?php echo __('Add a Customer Reviews'); ?> <button class="btn pull-right"><?php echo $this->Html->link(__('List Reviews'), array('action' => 'index')); ?></button></legend>
 		<?php

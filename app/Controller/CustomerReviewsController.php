@@ -26,10 +26,10 @@ class CustomerReviewsController extends AppController {
 		if ($this->request->is('post')) {
 			$this->CustomerReview->create();
 			if ($this->CustomerReview->save($this->request->data)) {
-				$this->Session->setFlash(__('The customer review has been saved'));
+				$this->Session->setFlash('You have successfully Saved a Customer Review!', 'default', array('class' => 'success_message'));
 				$this->redirect(array('action' => 'index'));
 			} else {
-				$this->Session->setFlash(__('The customer review could not be saved. Please, try again.'));
+				$this->Session->setFlash('There was an error in saving this form.  Please make sure all require fields are filled in', 'default', array('class' => 'error_message'));
 			}
 		}
 		$products = $this->CustomerReview->Product->find('list');
@@ -50,10 +50,10 @@ class CustomerReviewsController extends AppController {
 		}
 		if ($this->request->is('post') || $this->request->is('put')) {
 			if ($this->CustomerReview->save($this->request->data)) {
-				$this->Session->setFlash(__('The customer review has been saved'));
+				$this->Session->setFlash('You have successfully Saved a Customer Review!', 'default', array('class' => 'success_message'));
 				$this->redirect(array('action' => 'index'));
 			} else {
-				$this->Session->setFlash(__('The customer review could not be saved. Please, try again.'));
+				$this->Session->setFlash('There was an error in saving this form.  Please make sure all require fields are filled in', 'default', array('class' => 'error_message'));
 			}
 		} else {
 			$this->request->data = $this->CustomerReview->read(null, $id);
@@ -79,10 +79,10 @@ class CustomerReviewsController extends AppController {
 			throw new NotFoundException(__('Invalid customer review'));
 		}
 		if ($this->CustomerReview->delete()) {
-			$this->Session->setFlash(__('Customer review deleted'));
+			$this->Session->setFlash('The Customer Review was successfully deleted!', 'default', array('class' => 'success_message'));
 			$this->redirect(array('action' => 'index'));
 		}
-		$this->Session->setFlash(__('Customer review was not deleted'));
+		$this->Session->setFlash('The Customer Review was not deleted', 'default', array('class' => 'error_message'));
 		$this->redirect(array('action' => 'index'));
 	}
 }

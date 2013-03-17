@@ -5,7 +5,7 @@
 <div class="page-content">
 	<?php $this->Html->addCrumb('Faq', '/faqs');
 		  $this->Html->addCrumb('Add an FAQ', '/series/faqs');?>
-	<?php echo $this->Form->create('FAQ'); ?>
+	<?php echo $this->Form->create('Faq'); ?>
 		<fieldset>
 			<legend><?php echo __('Add an FAQ'); ?> <button class="btn pull-right"><?php echo $this->Html->link(__('List FAQ\'s'), array('action' => 'index')); ?></button></legend>
 		<?php

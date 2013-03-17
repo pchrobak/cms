@@ -82,7 +82,7 @@ class ArticlesController extends AppController {
 			throw new NotFoundException(__('Invalid article'));
 		}
 		if ($this->Article->delete()) {
-				$this->Session->setFlash('Article was successfully deleted!', 'default', array('class' => 'success_message'));
+			$this->Session->setFlash('Article was successfully deleted!', 'default', array('class' => 'success_message'));
 			$this->redirect(array('action' => 'index'));
 		}
 		$this->Session->setFlash('Article was not deleted', 'default', array('class' => 'error_message'));

@@ -15,21 +15,6 @@ class Product extends AppModel {
  */
 	public $displayField = 'name';
 	
-	public $actsAs = array(
-        'Upload.Upload' => array(
-            'product_image' => array(
-                'fields' => array(
-                    'dir' => 'photo_dir'
-                ),
-                'thumbnailSizes' => array(
-                    'large' => '800x600',
-                    'small' => '460x345',
-                    'thumb' => '220x165'
-                )
-            )
-        )
-    );
-
 	//The Associations below have been created with all possible keys, those that are not needed can be removed
 
 /**
@@ -47,6 +32,14 @@ class Product extends AppModel {
 		)
 	);
 
+	public $hasMany = array(
+        'ProductsImagesSwatch' => array(
+            'ProductsImagesSwatch' => 'Recipe',
+        ),
+		'ProductsImage' => array(
+            'ProductsImage' => 'Recipe',
+		)
+    );
 /**
  * hasAndBelongsToMany associations
  *
@@ -88,21 +81,6 @@ class Product extends AppModel {
 			'joinTable' => 'products_faqs',
 			'foreignKey' => 'product_id',
 			'associationForeignKey' => 'faq_id',
-			'unique' => true,
-			'conditions' => '',
-			'fields' => '',
-			'order' => '',
-			'limit' => '',
-			'offset' => '',
-			'finderQuery' => '',
-			'deleteQuery' => '',
-			'insertQuery' => ''
-		),
-		'Finish' => array(
-			'className' => 'Finish',
-			'joinTable' => 'products_finishes',
-			'foreignKey' => 'product_id',
-			'associationForeignKey' => 'finish_id',
 			'unique' => true,
 			'conditions' => '',
 			'fields' => '',

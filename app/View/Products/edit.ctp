@@ -22,6 +22,7 @@
 		
 	<ul class="nav nav-tabs" id="myTab">
 	  <li><a href="#details" data-toggle="tab" class="active">Product Details</a></li>
+	  <li><a href="#product-images" data-toggle="tab" class="active">Product Images</a></li>
 	  <li><a href="#specs" data-toggle="tab">Product Specs</a></li>
 	  <li><a href="#downloads" data-toggle="tab">Product Downloads</a></li>
 	  <li><a href="#related_products" data-toggle="tab">Related Products</a></li>
@@ -38,14 +39,6 @@
 				echo $this->Form->input('name', array('class' => 'input-xxlarge'));
 				echo $this->Form->input('series_id',array('empty' => 'Select a Series'));
 				echo $this->Form->input('Category');
-				echo $this->Form->input('Finish');?>
-				<div class="input file">
-					<label for="ProductProductImage">Main Product Image</label><br>
-					<?php echo $this->Html->image('thumbs/thumb_'.$this->data['Product']['product_image'], array('fullBase' => true, 'vspace' => '5'));?><br>
-					<input type="file" name="data[Product][product_image]" value="data[Product][product_image]" id="ProductProductImage"/><br>
-					<small>Please Ensure image is 800x600</small>
-				</div>
-				<?php
 				echo $this->Form->input('quick_description', array('class' => 'input-xxlarge'));
 				echo $this->Form->input('body_copy', array('class' => 'ckeditor'));
 				echo $this->Form->input('priced_per', array('class' => 'input-xlarge', 'options'=> array('each'=>'each','pair'=>'pair','system'=>'system'), 'empty'=>'Select Unit of Measure', 'label'=>'Unit Of Measure'));
@@ -58,7 +51,17 @@
 			</fieldset>
 		</div>
 		
-		
+		<!--CONTENT FOR PRODUCT IMAGES-->
+		<div class="tab-pane" id="product-images">
+			<h4>Product Images<small>(<?php echo $this->Html->link('Add more product images', array('controller' => 'products_images_swatches', 'action' => 'add')); ?>)</small></h4>
+			<?php foreach ($this->data["ProductsImagesSwatch"] as $prodimage){
+				echo $this->Html->image('thumbs/thumb_'.$prodimage['products_filename'], array('fullBase' => true, 'vspace' => '5'));	
+			}?>
+			<h4>Gallery Images<small>(<?php echo $this->Html->link('Add more gallery images', array('controller' => 'products_images', 'action' => 'add')); ?>)</small></h4>
+			<?php foreach ($this->data["ProductsImage"] as $prodgalleryimage){
+				echo $this->Html->image('thumbs/small_'.$prodgalleryimage['filename'], array('fullBase' => true, 'vspace' => '5'));	
+			}?>
+		</div>
 		
 		<!--CONTENT FOR SPECS-->
 		<div class="tab-pane" id="specs">
@@ -124,18 +127,6 @@
 		});	
 		
 	$("#CategoryCategory").pickList({
-		  buttons: true,
-		  beforeFrom: '',
-		  beforeTo: '',
-		  addText: '>>',
-		  addImage: '',
-		  removeText: '<<',
-		  removeImage: '',
-		  ieColor: '',
-		  ieBg: '#2b2b2b'
-		});	
-	
-	$("#FinishFinish").pickList({
 		  buttons: true,
 		  beforeFrom: '',
 		  beforeTo: '',
