@@ -46,10 +46,11 @@
 	<!--CONTENT FOR REGISTERED PRODUCTS-->
 	<div class="tab-pane" id="reg_product">
 		<h4>Registered Products<small>(<?php echo $this->Html->link('Add more registered products', array('controller' => 'registered_products', 'action' => 'add')); ?>)</small></h4>
-		<?php foreach ($this->data["RegisteredProduct"] as $regproduct){
-			echo $this->Html->link($regproduct['id'], array('controller' => 'registered_products', 'action' => 'edit', $regproduct['id']))."<br>";
-		   // echo $this->Html->link($registeredProduct['Product']['name'], array('controller' => 'products', 'action' => 'view', $registeredProduct['Product']['id']));
-			}?>
+		<?php 
+			//var_dump(($this->data["RegisteredProduct"]));
+		foreach ($this->data["RegisteredProduct"] as $regproduct){
+			echo $this->Html->link($regproduct['serial'], array('controller' => 'registered_products', 'action' => 'edit', $regproduct['id']))."<br>";?>
+			<?php }?>
 	</div>
 	
 	
