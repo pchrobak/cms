@@ -12,7 +12,7 @@
 		echo $this->Form->input('address');
 		echo $this->Form->input('address2');
 		echo $this->Form->input('city');
-		echo $this->Form->input('state_id');
+		echo $this->Form->input('state_id',array('empty' => 'Select a State'));
 		echo $this->Form->input('zip');
 		echo $this->Form->input('birthday', array('minYear'=>'1920', 'maxYear'=>'2000'));
 		echo $this->Form->input('email');

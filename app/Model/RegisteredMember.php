@@ -31,4 +31,13 @@ class RegisteredMember extends AppModel {
 			'order' => ''
 		)
 	);
+	
+	
+	public $hasMany = array(
+        'RegisteredProduct' => array(
+            'RegisteredProduct' => 'Recipe'
+        ),
+    );
+	
+	
 }
